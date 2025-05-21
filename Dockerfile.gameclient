@@ -1,0 +1,11 @@
+# Game Client
+FROM node:18
+
+RUN mkdir /GameClient
+WORKDIR /GameClient
+COPY ./GameClient/package.json /GameClient/
+RUN npm install
+
+COPY ./GameClient /GameClient/
+
+CMD npm run start

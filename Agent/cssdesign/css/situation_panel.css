@@ -1,0 +1,183 @@
+body {
+    background-image: url('/img/image1.png');
+
+    /* Full height */
+    /* height: 100%; */
+    /* width : 100%; */
+
+    /* Center and scale the image nicely */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    /* background-position: 0% 0%;
+    background-size: 100% 100%; */
+}
+div{
+}
+
+
+#situation-panel{
+    background: radial-gradient(closest-side, #000000ff, #00000000);
+    height : 80%;
+    width : 10%;
+    position : absolute;
+    right : 0%;
+    top : 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border : solid;
+}
+
+
+.situation-panel-wrapper{
+    /* background-color:aqua; */
+    /* margin: auto; */
+    width : 100%;
+    /* height : 5%; */
+    
+
+}
+
+#situation-panel-timer{
+    /* background-color: brown; */
+    /* margin: auto; */
+    /* border : solid; */
+    /* width : 15%; */
+    /* height : 5%; */
+    position : relative;
+    border-radius: 50%;
+    z-index : 15;
+    
+}
+
+
+.timer-frame{
+    position : relative;
+    content : url("/img/ArabicDecoUI/Circle3.svg");
+    /* border : solid; */
+    /* background-image: url(Circle8.svg); */
+    /* width : 60%; */
+    /* aspect-ratio: 1 / 1; */
+    /* border : solid; */
+    display: inline-block;
+    /* height : 100px; */
+    /* z-index : 10; */
+}
+
+.timer-inner{
+    position : absolute;
+    border-radius : 50%;
+    /* border : solid; */
+    background-color: rgb(129, 98, 20);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -51%);
+    width : 75%;
+    aspect-ratio: 1 / 1;
+    color : white;
+    font-size: 5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tektur', cursive;
+    cursor : pointer
+}
+
+.situation-panel-items-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.items-set{
+    position : relative;
+    text-align: center;
+    /* border : solid; */
+    /* border-color: yellowgreen; */
+}
+
+.dice-opportunity-frame{
+    /* src : "./Circle8.svg"; */
+    position : relative;
+    content : url("/img/ArabicDecoUI/Circle8.svg");
+    /* border : solid; */
+    /* background-image: url(Circle8.svg); */
+    width : 40%;
+    aspect-ratio: 1 / 1;
+    /* border : solid; */
+    display: inline-block;
+    /* height : 100px; */
+    z-index : 10;
+}
+
+
+.dice-opportunity-inner{
+    position : absolute;
+    border-radius : 50%;
+    /* border : solid;
+    border-color: aqua; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+    height : 75%;
+    aspect-ratio: 1 / 1;
+    z-index: 5;
+
+    
+}
+
+
+.inner-sky{
+    opacity : 1;
+    /* border : solid; */
+    /* margin : 15px; */
+    border-radius: 50%;
+    /* mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%); */
+    /* mask-image: radial-gradient(circle, black 0%, rgba(0, 0, 0, 0.0) 0%); */
+    box-shadow:
+        inset 0 0 0.5rem #000,      /* inner white */
+        inset 0.4rem 0 1rem #044,   /* inner left magenta short */
+        inset -0.4rem 0 1rem #0ff,  /* inner right cyan short */
+        inset 0.4rem 0 2rem #044,  /* inner left magenta broad */
+        inset -0.4rem 0 2rem #0ff /* inner right cyan broad */
+}
+
+
+
+.inner-green{
+    opacity : 1;
+    border-radius: 50%;
+    
+    box-shadow:
+        inset 0 0 0.5rem #000,      /* inner white */
+        inset 0.4rem 0 1rem #040,   /* inner left magenta short */
+        inset -0.4rem 0 1rem #0f0,  /* inner right cyan short */
+        inset 0.4rem 0 2rem #040,  /* inner left magenta broad */
+        inset -0.4rem 0 2rem #0f0 /* inner right cyan broad */
+
+}
+
+
+.inner-empty{
+    transition: opacity 500ms ease-in-out;
+    opacity : 0
+}
+
+
+/* .button-active{
+    cursor: pointer;
+}
+
+
+.button-inactive{
+    cursor: default;
+} */
+/* Godfavor phase */
+

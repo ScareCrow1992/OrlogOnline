@@ -1,0 +1,62 @@
+{
+  "name": "agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ],
+    "watch": [
+      "cssdesign/*"
+    ],
+    "ext": "html,css,js,cjs,mjs,json,pug"
+  },
+  "imports": {
+    "root": ".",
+    "#test_utils": "./index/cli/test/utils.js",
+    "#cli_utils": "./index/cli/utils/tool.js",
+    "#dummy_loader": "./index/DummyLoader.js"
+  },
+  "scripts": {
+    "cluster": "pm2 start ecosystem.config.cjs",
+    "learning": "node --expose-gc ./GameLearning/run.js",
+    "start": "node --expose-gc ./index/index.js",
+    "agent": "nodemon ./DeepLearning/tester.js",
+    "cases": "nodemon ./DeepLearning/cases.js",
+    "zmq": "nodemon ./DeepLearning/zmq.js",
+    "http": "nodemon ./DeepLearning/agent_http.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "pm2 start cli.config.cjs",
+    "control": "node ./index/cli/CLI.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "blessed": "^0.1.81",
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "inquirer": "^9.2.8",
+    "mathjs": "^12.1.0",
+    "minimist": "^1.2.8",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.1.2",
+    "mysql2": "^3.3.5",
+    "path": "^0.12.7",
+    "random-js": "^2.1.0",
+    "redis": "^4.6.7",
+    "redis-bird": "^2.0.61",
+    "snappy": "^7.2.2",
+    "table": "^6.8.1",
+    "term.js": "^0.0.7",
+    "ws": "^8.13.0"
+  }
+}

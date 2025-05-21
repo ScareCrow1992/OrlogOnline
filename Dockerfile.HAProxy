@@ -1,0 +1,20 @@
+# HAProxy
+FROM haproxy:2.8
+
+# SHELL ["/bin/bash", "-c"]
+
+# USER root
+
+# RUN apt-get update
+# RUN apt-get upgrade -y
+
+# RUN apt-get install net-tools
+
+# RUN apt-get install iptables -y
+# RUN apt-get install netcat -y
+# RUN apt-get install vim -y
+
+
+
+
+

@@ -1,0 +1,12 @@
+# Match Maker
+FROM node:18
+
+RUN mkdir /MatchMaker
+WORKDIR /MatchMaker
+COPY ./MatchMaker/package.json /MatchMaker/
+RUN npm install
+
+COPY ./MatchMaker /MatchMaker/
+
+
+CMD npm run start

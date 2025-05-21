@@ -1,0 +1,70 @@
+.view-contact{
+    display:flex;
+    width:100%;
+    height:100%
+
+}
+
+
+.contact-content-wrapper{
+    margin : 2.5rem 0;
+}
+
+
+#contact-container{
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+    margin: auto;
+    width : 70rem;
+    /* height: 10rem; */
+    background-color: #00000088;
+    border-radius: 2rem;
+}
+
+.contact-title{
+    font-size : 3rem;
+    font-weight: bold;
+    margin : 3rem;
+}
+
+.contact-content-desc{
+    text-indent: 3rem;
+    font-size: 1.3rem;
+    color : #dddddd;
+}
+
+.contact-content-kofi img{
+    transform: scale(1.5);
+    margin: 1.5rem 0 0 8rem;
+}
+
+
+.contact-content-icon{
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+
+    height: 3rem;
+    width: 12.5rem;
+    background-color: #4D798C;
+    margin: 1rem 0 0 6rem;
+    border-radius: 2rem;
+    cursor:pointer;
+}
+
+.contact-content-icon :nth-child(1){
+    font-size: 2rem;
+    margin : 0 0 0 0.4rem;
+    font-weight:bold;
+
+
+}
+
+.contact-content-icon :nth-child(2){
+    font-size: 1.3rem;
+    margin : 0 0 0 0.9rem;
+    font-weight:bold;
+    
+}

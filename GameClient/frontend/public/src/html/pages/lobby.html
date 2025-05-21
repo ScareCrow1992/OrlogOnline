@@ -1,0 +1,80 @@
+<div id="lobby-select">
+    <div class="content-blocks-wrapper">
+        <div class="content-block">
+            <div class="content-block-title">Create</div>
+            <hr class="content-block-hr">
+            <div class="content-block-desc">Make a room and invite friend</div>
+            <div class="content-block-button-wrapper">
+                <div class="content-block-button-layout">
+                    <div class="rank-score"></div>
+                    <div id="lobby-button-create" class="content-block-button">Create</div>
+                    <div class="rank-score"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-block">
+            <div class="content-block-title">Join</div>
+            <hr class="content-block-hr">
+            <div class="content-block-desc">Enter the room already made with the participation code sent by your friend.</div>
+            <input type="text" id = "input-join-lobby-token"  value="Hello World" class="lobby-input">
+            <div class="content-block-button-wrapper">
+                <div class="content-block-button-layout">
+                    <div class="rank-score"></div>
+                    <div id="lobby-button-join" class="content-block-button">Join</div>
+                    <div class="rank-score"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="lobby-waiting" style=" display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 5rem 3rem; ">
+    <div class="content-block">
+        <div class="lobby-user-info">
+            <div id="lobby-master-icon" class="lobby-user-icon">
+                <span class="material-symbols-outlined">
+                    grade
+                </span>
+            </div>
+            <div id="lobby-master-name" class="content-block-title">master</div>
+        </div>
+        <div class="lobby-user-info">
+            <div id="lobby-guest-icon" class="lobby-user-icon">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </div>
+            <div id="lobby-guest-name" class="content-block-title">guest</div>
+        </div>
+        <hr class="content-block-hr">
+        <div class="content-block-button-wrapper">
+            <div class="content-block-button-layout">
+                <div class="rank-score"></div>
+                <div class="content-block-button">Constant</div>
+                <div class="rank-score"></div>
+            </div>
+            <div class="content-block-button-layout">
+                <div class="rank-score"></div>
+                <div class="content-block-button">Liberty</div>
+                <div class="rank-score"></div>
+            </div>
+            <div class="content-block-button-layout">
+                <div class="rank-score"></div>
+                <div class="content-block-button">Draft</div>
+                <div class="rank-score"></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="font-size:4rem; margin:2rem;">Invite your friend.</div>
+    <input type="text"  disabled="disabled" value="Hello World" class="lobby-input">
+    <div style="display:flex; flex-direction: row;">
+        <span class="material-symbols-outlined" id="lobby-number-copy-icon">
+            content_copy
+        </span>
+        <span class="material-symbols-outlined" id="lobby-exit-button">
+            cancel
+        </span>
+    </div>
+
+</div>

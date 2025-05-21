@@ -1,0 +1,297 @@
+.content-block {
+    background-image: url("/img/background-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -50% 50%;
+}
+
+
+.content-block-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1.5rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 200;
+}
+
+.content-block-hr {
+    background-image: url("/img/horizontal-rule.png");
+    height: 1.5rem;
+    margin: 0rem 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border: none;
+}
+
+.content-block-desc {
+    text-align: center;
+    margin: 0.5rem 0.5rem;
+    color: #0FC4B2;
+    font-size: 1rem;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0rem;
+    font-weight: 600;
+}
+
+.content-block-img{
+    margin : 0 10%;
+    width : 80%
+}
+
+.content-block-button-wrapper {
+    margin: 0.5rem 0rem
+}
+
+
+.content-block-button-layout{
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rank-score{
+    width : 17.5%;
+    margin : 0.5rem;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rank-score-style{
+    border: 0.12rem solid white;
+    box-shadow: inset 0 0 0.5rem 0.15rem black;
+    /* background-color: #eecc22; */
+    background-image: url("/img/coin_texture_A.jpeg");
+    background-size: 300%;
+    aspect-ratio: 1 / 1;
+    font-family: 'Tektur', cursive;
+    font-weight: 900;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 4px black;
+    cursor:default;
+}
+
+.content-block-button {
+    width: 65%;
+    margin: 1.15rem 0rem 1.15rem 0rem;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    border: solid 1.5px;
+    border-radius: 2rem;
+    padding: 0.75rem 0rem;
+    /* background-color: #3FC0AC; */
+    background-image: url("/img/content-block-button.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: inset 0 0 0.15rem 0.3rem rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px black;
+    /* transition: box-shadow 0.5s; */
+}
+
+
+.content-block-button:hover {
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 6px #fff,
+        inset 2.5px 0 10px #0fa,
+        inset -2.5px 0 10px #0ff,
+        inset 2.5px 0 40px #0fa,
+        inset -2.5px 0 40px #0ff,
+        0 0 25px #fff,
+        -10px 0 40px #0fa,
+        10px 0 40px #0ff;
+
+    /* animation-name: button-hover-animation;
+    animation-delay: 0.5s;
+    animation-duration: 0.75s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out; */
+}
+
+
+.content-block-button:active{
+    transform: translate(0, 4px);
+
+}
+
+/* 
+@keyframes button-hover-animation {
+    from {
+        box-shadow:
+            inset 0 0 6px #fff,
+            inset 2.5px 0 10px #0fa,
+            inset -2.5px 0 10px #0ff,
+            inset 2.5px 0 40px #0fa,
+            inset -2.5px 0 40px #0ff,
+            0 0 25px #fff,
+            -10px 0 40px #0fa,
+            10px 0 40px #0ff;
+    }
+
+    to {
+        box-shadow:
+            inset 0 0 3px #fff,
+            inset 1.5px 0 25px #0fa,
+            inset -1.5px 0 5px #0ff,
+            inset 1.5px 0 20px #0fa,
+            inset -1.5px 0 20px #0ff,
+            0 0 15px #fff,
+            -5px 0 20px #0fa,
+            5px 0 20px #0ff;
+    }
+}
+*/
+
+
+.content-block-moreinfo-wrapper{
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+.content-block-moreinfo {
+    margin: 1.5rem;
+    color: #0FC4B2;
+    font-size: 1rem;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0rem;
+    vertical-align: text-top;
+    /* transition-duration: 0.5s; */
+}
+
+.content-block-arrow{
+    
+    object-fit: cover;
+    /* transition-duration: 0.5s; */
+
+
+}
+
+
+.content-block-moreinfo-wrapper:hover .content-block-moreinfo {
+    cursor: pointer;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.content-block-moreinfo-wrapper:hover .content-block-arrow {
+    cursor: pointer;
+    color: #fff;
+    box-shadow:
+        inset 0 0 3px #fff,
+        inset 1.5px 0 25px #fff,
+        inset -1.5px 0 5px #0fa,
+        inset 1.5px 0 20px #0fa,
+        inset -1.5px 0 20px #0fa,
+        0 0 15px #fff,
+        -5px 0 20px #0fa,
+        5px 0 20px #0fa;
+}
+
+
+.content-block .discout-label{
+    width : 8rem;
+    height : 4rem;
+    border-radius: 2rem;
+    background-color: #FF8300;
+    transform-origin: 4.5rem 2rem;
+    transform: translate(-2.666rem, -1.333rem) rotate(-0.0625turn);
+    color : white;
+    font-weight : bold;
+    font-size:2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* PC */
+@media screen and (min-width: 1330px) {
+    .content-blocks-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin: 10rem 3rem;
+        justify-content: space-evenly;
+        /* border: solid rgba(255, 255, 0, 0.288); */
+    }
+
+    .content-block {
+        /* flex-grow: 1; */
+        color: white;
+        margin: 0.5rem;
+        /* width: 30%; */
+        width: 22rem;
+        min-height: 100%;
+        border: solid 1.5px;
+    }
+
+}
+
+
+/* Tablet */
+@media screen and (min-width:992px) and ((max-width: 1330px)) {
+    .content-blocks-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin: 3rem;
+        justify-content: space-between;
+        /* border: solid rgba(255, 255, 0, 0.288); */
+    }
+
+    .content-block {
+        flex-grow: 1;
+        color: white;
+        margin: 0.5rem;
+        width: 30%;
+        max-width: 20rem;
+        min-height: 100%;
+        border: solid 1.5px;
+    }
+}
+
+
+
+/* mobile horizontal */
+@media screen and (min-width:768px) and ((max-width: 992px)) {}
+
+
+
+/* mobile vertical */
+@media screen and ((max-width: 768px)) {
+    .content-blocks-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem;
+        justify-content: space-between;
+        align-items: center;
+        border: solid rgba(255, 255, 0, 0.288);
+    }
+
+    .content-block {
+        flex-grow: 1;
+        color: white;
+        margin: 0.5rem;
+        width: 85%;
+        min-height: 100%;
+        border: solid 1.5px;
+    }
+}

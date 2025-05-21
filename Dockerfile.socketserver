@@ -1,0 +1,14 @@
+# Game Server
+FROM node:18
+
+RUN mkdir /SocketServer
+WORKDIR /SocketServer
+COPY ./SocketServer/package.json /SocketServer/
+RUN npm install
+RUN npm install pm2 -g
+
+COPY ./SocketServer /SocketServer/
+
+# CMD npm run start
+
+CMD ["pm2-runtime", "ecosystem.config.cjs"]

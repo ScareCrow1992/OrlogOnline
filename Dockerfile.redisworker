@@ -1,0 +1,11 @@
+# Game Client
+FROM node:18
+
+RUN mkdir /RedisWorker
+WORKDIR /RedisWorker
+COPY ./RedisWorker/package.json /RedisWorker/
+RUN npm install
+
+COPY ./RedisWorker /RedisWorker/
+
+CMD npm run start

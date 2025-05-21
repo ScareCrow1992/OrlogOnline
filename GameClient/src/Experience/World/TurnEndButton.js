@@ -1,0 +1,61 @@
+import * as THREE from 'three'
+import Experience from '../Experience.js'
+
+export default class TurnEndButton {
+    constructor() {
+        // super()
+
+        this.experience = new Experience()
+        this.scene = this.experience.scene
+        this.resources = this.experience.resources
+
+        this.setGeometry()
+        this.setMaterial()
+        this.setMesh()
+
+
+        this.stoneColor = {
+            top: 0x00e1ff,
+            bottom: 0x00ff11
+        }
+
+    }
+
+    setGeometry() {
+        this.geometry = new THREE.BoxGeometry(1.5, 0.5, 1);
+    }
+
+    setMaterial() {
+        this.material = new THREE.MeshStandardMaterial({ metalness: 0.9, roughness: 0.1, color: 0x00ff11 })
+    }
+
+    setMesh() {
+        this.mesh = new THREE.Mesh(this.geometry, this.material)
+        this.mesh.position.y += 0.25
+        // this.mesh.rotation.x = - Math.PI * 0.5
+        // this.mesh.receiveShadow = true
+        this.scene.add(this.mesh)
+    }
+
+    clicked() {
+        // this.turnState = this.turnState == "bottom" ? "top" : "bottom"
+        // this.material.color.set(this.stoneColor[`${this.turnState}`])
+        // this.trigger("turnEnd", [this.turnState])
+        this.experience.game.changeTurnButtonPushed()
+    }
+
+
+
+
+    active() {
+        // if (this.debug.active)
+        //   this.debugFolder.show();
+    }
+
+    deactive() {
+        // if (this.debug.active)
+        //   this.debugFolder.hide();
+    }
+
+
+}

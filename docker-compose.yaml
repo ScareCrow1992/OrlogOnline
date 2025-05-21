@@ -1,0 +1,137 @@
+version: "3.7"
+
+services:
+
+  mongodb:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.mongoDB
+    environment:
+      - MONGO_HOST=localhost
+      - MONGO_PORT=27017
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=qwerqwer123
+      - MONGO_INITDB_DATABASE=orlog
+    ports:
+      - 27017:27017
+    volumes:
+      - ./Redis:/Redis
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory : 2g
+
+
+
+  redis:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.redis
+    env_file: .env
+    ports:
+      - 6379:6379
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory : 2g
+
+
+  redis-worker:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.redisworker
+    volumes:
+      - ./RedisWorker/src:/RedisWorker/src
+      - ./RedisWorker/package.json:/RedisWorker/package.json
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory : 2g
+
+      
+  game-client:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.gameclient
+    ports:
+      - 3000:3000
+    volumes:
+      - ./GameClient/src:/GameClient/src
+      - ./GameClient/frontend:/GameClient/frontend
+      - ./GameClient/server:/GameClient/server
+      - ./.env:/GameClient/.env
+      - ${BROWSER_CONFIG}:/GameClient/frontend/public/src/js/util/config.js
+      - ./GameClient/package.json:/GameClient/package.json
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory : 2g
+
+
+  socket-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.socketserver
+    ports:
+      - 7500:7500
+      - 7510:7510
+    volumes:
+      - ./SocketServer/src:/SocketServer/src
+      - ./.env:/SocketServer/.env
+      - ./SocketServer/package.json:/SocketServer/package.json
+      - ./SocketServer/ecosystem.config.cjs:/SocketServer/ecosystem.config.cjs
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory : 8g
+
+
+  engine-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.engineserver
+    ports:
+      - 6500:6500
+      - 6510:6510
+    volumes:
+      - ./EngineServer/src:/EngineServer/src
+      - ./.env:/EngineServer/.env
+      - ./EngineServer/package.json:/EngineServer/package.json
+      - ./EngineServer/ecosystem.config.cjs:/EngineServer/ecosystem.config.cjs
+    env_file: .env
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory : 4g
+
+  back-end:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.backend
+    ports:
+      - 7370:7370
+    volumes:
+      - ./Backend/static:/Backend/static
+      - ./Backend/index:/Backend/index
+      - ./Backend/ecosystem.config.cjs:/Backend/ecosystem.config.cjs
+      - ./Backend/package.json:/Backend/package.json
+      - ./.env:/Backend/.env
+      - ${BACKEND_CONFIG}:/Backend/index/config/config.js
+    env_file: .env
+    environment:
+      - HTTP_PORT=7370
+      - LOCAL_PORT=8370
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory : 2g

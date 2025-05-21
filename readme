@@ -1,0 +1,11 @@
+
+[document]
+https://grand-pajama-ca5.notion.site/6340a97773284f6782a3dbeac6c1fc08
+
+1. docker container build
+docker-compose --env-file=./ENV/dev.cfg build
+
+
+2. docker container run
+docker-compose --env-file=./ENV/dev.cfg up
+

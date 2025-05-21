@@ -1,0 +1,171 @@
+.view-guide *{
+    
+    font-family: 'PT Sans', sans-serif;
+    /* padding: 2rem */
+}
+
+.view-guide .view-guide-wrapper{
+    padding : 4rem;
+    width : 70rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .view-guide ul,ol {
+    list-style: auto;
+} */
+
+
+.view-guide-wrapper .view-guide-contents-list{
+    padding : 1rem;
+    width: fit-content;
+    margin : 6rem 0;
+
+}
+
+
+.view-guide-wrapper .view-guide-contents-list ol li::marker {
+    color: gray;
+    font-weight: bold;
+}
+
+
+.view-guide h1{
+    margin : 2rem 0;
+}
+
+
+.view-guide h2{
+    margin: 4rem 0 0 0;
+}
+
+
+.view-guide h1::after{
+    content :"";
+    display: block;
+    margin : 1rem 0;
+    width: 90%;
+    height: 2px;
+    background: gray;
+}
+
+
+
+.guide-dice-faces{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+
+
+}
+
+
+.guide-dice-faces-cellwrapper{
+    border : 2px solid #524B49;
+}
+
+.guide-dice-faces-cellwrapper.dice-faces-icon-wrapper{
+    background: url(/textures/dice_material.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.dice-faces-icon{
+    /* vertical-align: middle; */
+    /* width: 50%; */
+    /* height: 50%; */
+
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    padding : 17%;
+
+
+}
+
+
+.dice-faces-desc{
+
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+
+}
+
+
+.guide-token-text{
+    
+    color: rgb(255, 238, 0);
+    font-size: 3rem;
+    padding: 1rem 0.1rem 1rem 0.2rem;
+    margin:0.5rem;
+
+    border-radius: 20%;
+    box-shadow:
+        inset 0 0 0.5rem #fff,
+        inset 0.4rem 0 0.4rem rgb(255, 213, 0),
+        inset -0.4rem 0 0.4rem rgb(0, 0, 0),
+        inset 0.4rem 0 2rem rgb(255, 213, 0),
+        inset -0.4rem 0 2rem rgb(0, 0, 0),
+        0 0 0.3rem #fff,
+        -0.1rem 0 0.4rem rgb(255, 213, 0),
+        0.1rem 0 0.4rem rgb(0, 0, 0);
+}
+
+
+
+
+
+.guide-godfavor-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+.guide-godfavor-cards-cell-wrapper{
+    /* border: 2px solid #524B49; */
+    display: block;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+
+
+.guide-godfavor-cards-cell-wrapper.header{
+    background-color: #524B49;
+    font-size: 2rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-godfavor-piece{
+}
+
+
+.guide-godfavor-desc{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.guide-godfavor-desc *{
+    line-height: 3rem;    
+    font-family: 'Nanum Myeongjo', serif;
+    font-size : 2.2rem;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+
+
+#guide-godfavor-info{
+    position : absolute;
+    right : 2%;
+    top : 15%;
+    text-align: center;
+}
+

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlog-Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Maven+Pro&family=Noto+Serif:wght@300&family=Lora:wght@600&family=Noto+Serif&family=Nanum+Myeongjo&family=PT+Sans&family=Tektur&display=swap" rel="stylesheet">
+
+    <!-- <style type="text/css">
+        @font-face {
+            font-family: "Lora";
+            src: url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+            unicode-range:U+0030-0039, U+0041-005A, U+0061-007A
+
+        }
+    </style> -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive/pc.css">
+    <link rel="stylesheet" href="/css/responsive/tablet.css">
+    <link rel="stylesheet" href="/css/responsive/mobile_horizontal.css">
+    <link rel="stylesheet" href="/css/responsive/mobile_vertical.css">
+
+    <link rel="stylesheet" href="/css/pages/home.css">
+    <link rel="stylesheet" href="/css/pages/guide.css">
+    <link rel="stylesheet" href="/css/pages/about.css">
+    <link rel="stylesheet" href="/css/pages/profile.css">
+    <link rel="stylesheet" href="/css/pages/lobby.css">
+    <link rel="stylesheet" href="/css/pages/contact.css">
+
+    <link rel="favicon" href="/favicon.ico">
+        
+    <!-- <link rel="stylesheet" href="/css/style/situation_panel.css"> -->
+    <link rel="stylesheet" href="/css/style/ui-buttons.css">
+
+
+    <link rel="stylesheet" href="/gameui/style.css">
+    <script crossorigin="anonymous" src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.148.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.148.0/examples/jsm/",
+                "gsap": "https://unpkg.com/gsap@3.11.5/index.js",
+                "cannon": "https://unpkg.com/cannon@0.6.2/build/cannon.js",
+                "lil-gui" : "https://unpkg.com/lil-gui@0.17.0/dist/lil-gui.umd.js"
+            
+            }
+        }
+    </script>
+
+    <!-- <script type="module" src="/js/index.js"></script> -->
+    
+    <script type="module" src="/entry/index_bundle.js"></script>
+
+
+</head>
+<!-- 
+"three": "./node_modules/three/build/three.module.js",
+"three/" : "./node_modules/three/",
+"three/addons/": "./node_modules/three/examples/jsm/",
+"three/nodes/": "./node_modules/three/examples/jsm/nodes/",
+"three/*.js" : "./*.js", -->
+
+
+<body>
+
+
+<!-- https://cdn.jsdelivr.net/npm/lil-gui/dist/lil-gui.umd.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- <script defer type="module" src="script.js"></script> -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.18"></script>
+
+    <div id="blackout" style="
+        position: absolute;
+        width : 100vw;
+        height : 100vh;
+        background-color: black;
+        z-index: 20;
+    ">
+        <div class = "loading-bar"></div>
+    </div>
+
+    <div id="webpage-root" class="layout-pc">
+        <div id="header" class="layout-pc">
+            <input type="checkbox" id="virtual-menu-button" />
+            <label for="virtual-menu-button" id="menu-button-label">
+                <svg height="15" width="52">
+                    <g fill="none">
+                        <path stroke="white" stroke-width="5" stroke-linecap="round" d="M5 7.5 l45 0" />
+                    </g>
+                </svg>
+                <svg height="15" width="52">
+                    <g fill="none">
+                        <path stroke="white" stroke-width="5" stroke-linecap="round" d="M5 7.5 l45 0" />
+                    </g>
+                </svg>
+                <svg height="15" width="52">
+                    <g fill="none">
+                        <path stroke="white" stroke-width="5" stroke-linecap="round" d="M5 7.5 l45 0" />
+                    </g>
+                </svg>
+
+            </label>
+
+
+            <div id="logo">
+                <img id="logo-img" class="icon-img" src="/img/orlog-logo.png">
+                <img id="logo-text" class="icon-img" src="/img/orlog-text.png">
+            </div>
+            <div id="menu" class="layout-pc">
+                <label for="virtual-menu-button">
+                    <div class="menu-button">
+                        <div id = "menu-button-play" class = "menu-button-txt">Play</div>
+                        <div class = "menu-button-highlight"></div>
+                    </div>
+                    <div class="menu-button">
+                        <div id = "menu-button-guide" class = "menu-button-txt">Guide</div>
+                        <div class = "menu-button-highlight"></div>
+                    </div>
+                    <div class="menu-button">
+                        <div id = "menu-button-news" class = "menu-button-txt">News</div>
+                        <div class = "menu-button-highlight"></div>
+                    </div>
+                    <div class="menu-button">
+                        <div id = "menu-button-about" class = "menu-button-txt">About</div>
+                        <div class = "menu-button-highlight"></div>
+                    </div>
+                    <div class="menu-button">
+                        <div id = "menu-button-lobby" class = "menu-button-txt">Lobby</div>
+                        <div class = "menu-button-highlight"></div>
+                    </div>
+                    <div class="menu-button">
+                        <div id = "menu-button-contact" class = "menu-button-txt">Contact</div>
+                        <div class = "menu-button-highlight"></div>
+                    </div>
+                    <!-- <div class="menu-button">
+                        <div class = "menu-button-txt"><p><%= ddd %></p></div>
+                        <div class = "menu-button-highlight"></div>
+                    </div> -->
+                    
+                </label>
+            </div>
+            <div id="setting">
+
+                <div class="setting-contents-wrapper">
+                    <div class="setting-contents-flex">
+                        <span class="setting-content-container material-symbols-outlined">
+                            person
+                        </span>
+                        <span id="setting-language" class="setting-content-container material-symbols-outlined">
+                            language_korean_latin
+                        </span>
+                        <a id="setting-signout" class="setting-content-container material-symbols-outlined" href="https://orlog.io">
+                            logout
+                        </a>
+                    </div>
+                    <div id = "user_profie_wrapper">
+                        <div class = "user_profile_picture"></div>
+                        <div class = "user_profile_name">PixelBot</div>
+                    </div>
+                    <div id="buttonDiv"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="view">
+        </div>
+
+        <div id="match-alert">
+            <div id="match-alert-title">Finding Opponent</div>
+            <div id="match-alert-loading-icon">
+                <div class="lds-dual-ring"></div>
+                <div id="check-wrapper">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                </div>
+            </div>
+            <div id="match-cancle-button">Cancel</div>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="game-canvas">
+        <canvas class="webgl"></canvas>
+        <div class="info-ui">
+            <div id="dice-info" class="info-ui-txt">
+                <div class="ui-vertical-container">
+                    <p class="ui-diceface-description">
+                        Block 1
+                        <!-- <span class="img-inside-text-wrapper">
+                            <img class="img-inside-text" src="/textures/dice/Axe.png">
+                        </span> -->
+                        damage
+                    </p>
+
+                    <p id="token-description" class="ui-diceface-description ui-diceface-token-description">
+                        Gain 1 <span class="token-text">⌘</span>.
+                    </p>
+                </div>
+                <hr>
+                <div class="ui-vertical-container dice-blue-print">
+                    <div class="dice-blue-print-cell"></div>
+                    <div class="dice-blue-print-cell">
+                    </div>
+                    <div class="dice-blue-print-cell"></div>
+
+
+                    <div class="dice-blue-print-cell">
+                    </div>
+                    <div class="dice-blue-print-cell">
+                    </div>
+                    <div class="dice-blue-print-cell">
+                    </div>
+
+
+                    <div class="dice-blue-print-cell"></div>
+                    <div class="dice-blue-print-cell">
+                    </div>
+                    <div class="dice-blue-print-cell"></div>
+
+
+                    <div class="dice-blue-print-cell"></div>
+                    <div class="dice-blue-print-cell">
+                    </div>
+                    <div class="dice-blue-print-cell"></div>
+
+
+
+
+                </div>
+                <hr>
+
+                <div class="ui-vertical-container">
+                    <span class="material-symbols-outlined" style="font-size: 3rem; vertical-align:middle;">
+                        left_click
+                    </span>
+                    <span style="vertical-align:middle"> Select</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="notice-ui" class="notice-ui-anchor">
+            <span id="notice-ui-txt" class="notice-ui-wrapper">
+                Roll Phase
+            </span>
+            <!-- <span id="notice-ui-txt">hello world hello world </span> -->
+            <!-- <img src="https://2.bp.blogspot.com/-CJzyIpsXrR8/VaakNgVIzeI/AAAAAAAAJv0/U0IlTFJK-Bs/s1600/2015-06-27%252525252022.10.31.png" id="item_1" class="brash_1"> -->
+        </div>
+
+        <div id="description-ui" class="notice-ui-anchor">
+            <span id="description-ui-txt" class="notice-ui-wrapper">
+                Select dice or skip
+            </span>
+            <!-- <span id="notice-ui-txt">hello world hello world </span> -->
+            <!-- <img src="https://2.bp.blogspot.com/-CJzyIpsXrR8/VaakNgVIzeI/AAAAAAAAJv0/U0IlTFJK-Bs/s1600/2015-06-27%252525252022.10.31.png" id="item_1" class="brash_1"> -->
+        </div>
+
+        <div id="alert-ui"  class="notice-ui-anchor">
+            <span id = "alert-ui-txt" class = "notice-ui-wrapper">
+                Card selection not complete.
+            </span>
+        </div>
+
+        <span id="score-ui">
+            <span>
+                <span>score : </span>
+                <span id="score-ui-txt">152</span>
+            </span>
+            <span id="score-ui-change">(<span id = "score-ui-change-sign"></span> <span id = "score-ui-change-txt">17</span>)</span>
+        </span>
+
+
+        <div id="top-player" class="info-ui">
+            <div class="info-ui-txt godfavor-ui">
+                <div class="ui-vertical-container godfavor-title">
+                    Thor's Strike
+                </div>
+                <div class="ui-vertical-container">
+                    <p class="ui-diceface-description">
+                        Deal damage to the opponent.
+                    </p>
+
+                    <div
+                        style="display: flex; justify-content: space-between; color:rgb(141, 141, 141); font-weight : bold; font-size: 1.0rem">
+                        <div style="text-align: left;">Invoke : After</div>
+                        <div style="text-align: right;">Priority : 6</div>
+                    </div>
+                    <div id = "additional-input-top" class="ui-godfavor-additional-input"
+                        style="background-color : #DD6600;
+                        border-radius : 2rem;
+                        width: fit-content;
+                        padding : 0 2.5rem;
+                        text-align: center;
+                        text-shadow: black 0px 2px 2px, black 0px -2px 2px, black 2px 0px 2px, black -2px 0px 2px;
+                        font-weight:bold;">additional input</div>
+                </div>
+                <hr>
+
+                <div class="ui-vertical-container info-godfavor-cell-container">
+                    <div class="ui-vertical-container info-godfavor-cell">
+                        <div style="display:flex">
+                            <div class="info-godfavor-cell-token">
+                                4 ⌘
+                            </div>
+                            <div class="info-godfavor-cell-description">
+                                Deal 2 damage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-vertical-container info-godfavor-cell">
+                        <div style="display:flex">
+                            <div class="info-godfavor-cell-token">
+                                8 ⌘
+                            </div>
+                            <div class="info-godfavor-cell-description">
+                                Deal 5 damage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-vertical-container info-godfavor-cell">
+                        <div style="display:flex">
+                            <div class="info-godfavor-cell-token">
+                                12 ⌘
+                            </div>
+                            <div class="info-godfavor-cell-description">
+                                Deal 8 damage.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="ui-vertical-container">
+                    <span class="material-symbols-outlined" style="font-size: 3rem; vertical-align:middle;">
+                        left_click
+                    </span>
+                    <span style="vertical-align:middle"> Select</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="bottom-player" class="info-ui">
+            <div class="info-ui-txt godfavor-ui">
+                <div class="ui-vertical-container godfavor-title">
+                    Thor's Strike
+                </div>
+                <div class="ui-vertical-container">
+                    <p class="ui-diceface-description">
+                        Deal damage to the opponent.
+                    </p>
+
+                    <div
+                        style="display: flex; justify-content: space-between; color:rgb(141, 141, 141); font-weight : bold; font-size: 1.0rem">
+                        <div style="text-align: left;">Invoke : After</div>
+                        <div style="text-align: right;">Priority : 6</div>
+                    </div>
+                    <div id = "additional-input-bottom" class="ui-godfavor-additional-input"
+                        style="background-color : #DD6600;
+                        border-radius : 2rem;
+                        width: fit-content;
+                        padding : 0 2.5rem;
+                        text-align: center;
+                        text-shadow: black 0px 2px 2px, black 0px -2px 2px, black 2px 0px 2px, black -2px 0px 2px;
+                        font-weight:bold;">additional input</div>
+                </div>
+                <hr>
+
+                <div class="ui-vertical-container info-godfavor-cell-container">
+                    <div class="ui-vertical-container info-godfavor-cell">
+                        <div style="display:flex">
+                            <div class="info-godfavor-cell-token">
+                                4 ⌘
+                            </div>
+                            <div class="info-godfavor-cell-description">
+                                Deal 2 damage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-vertical-container info-godfavor-cell">
+                        <div style="display:flex">
+                            <div class="info-godfavor-cell-token">
+                                8 ⌘
+                            </div>
+                            <div class="info-godfavor-cell-description">
+                                Deal 5 damage.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-vertical-container info-godfavor-cell">
+                        <div style="display:flex">
+                            <div class="info-godfavor-cell-token">
+                                12 ⌘
+                            </div>
+                            <div class="info-godfavor-cell-description">
+                                Deal 8 damage.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="ui-vertical-container">
+                    <span class="material-symbols-outlined" style="font-size: 3rem; vertical-align:middle;">
+                        left_click
+                    </span>
+                    <span style="vertical-align:middle"> Select</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- <p id="situation-viewer">
+  </p> -->
+
+
+        <!-- <div id = "situation-panel-anchor">
+            <div id="situation-panel">
+                <div class="situation-panel-wrapper">
+                    <div id="top-panel" class="situation-panel-items-wrapper">
+                    </div>
+                </div>
+                <div id="situation-panel-timer" class="situation-panel-wrapper">
+                    <div class="items-set">
+                        <div class = "timer-frame"></div>
+                        <div class = "timer-inner">16</div>
+                    </div>
+                </div>
+                <div class="situation-panel-wrapper">
+                    <div id="bottom-panel" class="situation-panel-items-wrapper">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        
+        <div id="notice-anchor">
+            <div id="notice-origin">
+                <div id="notice-block">
+                    <div id="notice-title">SURRENDER</div>
+                    <div id="notice-main">
+                        <!-- <div id="notice-description">Surrender</div> -->
+                        <div id="notice-buttons">
+                            <div id="notice-button-accept"> YES </div>
+                            <div id="notice-button-decline"> NO </div>
+                        </div>
+                    </div>
+                    <!-- <img id="notice-logo" src="/img/orlog-logo4.png"> -->
+                    
+        
+                </div>
+            </div>
+        </div>
+
+        <div id="ui-buttons-origin">
+            <div class="ui-button-container" id="surrender-button">
+                <div class="ui-button-icon"></div>
+        
+            </div>
+            <div class="ui-button-container on" id="bgm-button">
+                <div class="ui-button-icon"></div>
+                <div class="slidecontainer">
+                    <input type="range" orient="vertical" min="0" max="100" value="50" class="slider">
+                </div>
+            </div>
+            <div class="ui-button-container on" id="sfx-button">
+                <div class="ui-button-icon"></div>
+                <div class="slidecontainer">
+                    <input type="range" orient="vertical" min="0" max="100" value="50" class="slider">
+                </div>
+            </div>
+        </div>
+        
+        <div class = "tag-container">
+            <div id = "top-tag"  class = "tag-wrapper">
+                <div class = "tag-name-wrapper">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class = "tag-score"></div>
+            </div>
+            
+            <div id = "bottom-tag" class = "tag-wrapper">
+                <div class = "tag-name-wrapper">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class = "tag-score"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- <script defer type="module" src="/game/script.js"></script> -->
+    <script defer type="module" src="/entry/subindex_bundle.js"></script>
+</body>
+
+</html>

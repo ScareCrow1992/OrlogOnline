@@ -1,0 +1,74 @@
+.view-about .view-about-wrapper{
+    margin: 2rem 0 1rem 5rem;
+    
+}
+
+.view-about h1{
+    margin : 2rem 0;
+}
+
+
+.view-about .updatesDetail__article__content{
+    margin: 3rem 10rem 0px 4rem;
+    width : 60rem;
+}
+
+
+.view-about .updatesDetail__article__content p{
+    font-size : 1.25rem;
+    margin : 2.5rem 0rem;
+    font-weight : 300;
+    line-height : 2.25rem;
+}
+
+
+.view-about .updatesDetail__article__content img {
+    max-width: 100%;
+    /* height: auto; */
+    margin :4rem 0;
+}
+
+
+
+.view-about .updatesDetail__article__content blockquote *{
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 3rem;
+    margin : 4rem 0;
+}
+
+
+.view-about .horizontal-line{
+    margin : 5rem 15rem;
+	display: flex;
+    justify-content: center; 
+}
+
+
+.view-about .view-about-footer{
+    /* background-color : #282828; */
+	display: flex;
+    justify-content: space-evenly; 
+    padding : 4rem;
+    align-items: center;
+    height : 12rem;
+}
+
+
+
+.view-about .view-about-footer-text{
+    font-size : 1.25rem;
+    font-weight : bold;
+    /* flex-grow:0; */
+    /* width : 30rem; */
+}
+
+
+/* ubisoft stacked logo_white.png */
+
+.view-about .view-about-footer-logo{
+    margin : 0 0 0 9rem;
+    height : 10rem;
+    width : 20rem;
+    /* flex-grow:1; */
+}

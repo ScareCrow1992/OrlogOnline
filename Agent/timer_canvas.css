@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+    font-family: "Nanum Pen Script";
+    src: url("./fonts/Nanum_Pen_Script/NanumPenScript-Regular.ttf");
+    /* unicode-range: U+0041-005A, U+0061-007A; */
+    unicode-range: U+AC00-D7A3;
+
+}
+
+
+
+@font-face {
+    font-family: "Nanum Pen Script";
+    src: url("./fonts/Lobster/Lobster-Regular.ttf");
+    unicode-range: U+0041-005A, U+0061-007A;
+    /* unicode-range: U+AC00-D7A3; */
+
+}
+
+#en-body{
+    font-size : 5rem;
+}
+
+#kr-body{
+    font-size : 5rem;
+}
+
+.font-total{
+    font-family: "Nanum Pen Script";
+}

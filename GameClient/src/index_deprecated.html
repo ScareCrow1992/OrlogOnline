@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>26 - Code structuring</title>
+	
+	<link rel="stylesheet" href="/gameui/style.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head><body>
+	<script defer type="importmap">
+    {
+		  "imports": {
+			"three": "./node_modules/three/build/three.module.js",
+			"three/" : "./node_modules/three/",
+			"three/addons/": "./node_modules/three/examples/jsm/",
+			"three/nodes/": "./node_modules/three/examples/jsm/nodes/",
+			"three/*.js" : "./*.js",
+			"gsap": "./node_modules/gsap/index.js",
+			"cannon": "./node_modules/cannon/build/cannon.js",
+			"lil-gui" : "/node_modules/lil-gui/dist/lil-gui.esm.js"
+		
+		  }
+	}
+  </script>
+
+	<script defer src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+	<!-- <script defer type="importmap">
+        {
+          "imports": {
+            "three": "/node_modules/three/build/three.module.js",
+            "gsap" : "/node_modules/gsap/index.js",
+            "lil-gui" : "/node_modules/lil-gui/dist/lil-gui.esm.js"
+          }
+        }
+    </script> -->
+
+<!-- 
+	<script>
+		let webSocket = new WebSocket("wss://127.0.0.1:443");   
+        webSocket.onopen = (event) => {
+            webSocket.send("Here's some text that the server is urgently awaiting!");
+            console.log("socket connect is success!")}
+	</script> -->
+
+	<canvas class="webgl"></canvas>
+
+
+
+	<div class="info-ui">
+		<div id="dice-info" class="info-ui-txt">
+			<div class="ui-vertical-container">
+				<p class="ui-diceface-description">
+					Block 1
+					<span class="img-inside-text-wrapper">
+						<img class="img-inside-text" src="/textures/dice/Axe.png">
+					</span>
+					damage
+				</p>
+
+				<p class="ui-diceface-description ui-diceface-token-description">
+					Gain 1 <span class="token-text">⌘</span>.
+				</p>
+			</div>
+			<hr>
+			<div class="ui-vertical-container dice-blue-print">
+				<div class="dice-blue-print-cell"></div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell"></div>
+
+
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+
+
+				<div class="dice-blue-print-cell"></div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell"></div>
+
+
+				<div class="dice-blue-print-cell"></div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell"></div>
+
+
+
+
+			</div>
+			<hr>
+
+			<div class="ui-vertical-container">
+				<span class="material-symbols-outlined" style="font-size: 3rem; vertical-align:middle;">
+					mouse
+				</span>
+				<span style="vertical-align:middle"> Select</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="notice-ui" class = "notice-ui-anchor">
+		<span id="notice-ui-txt" class = "notice-ui-wrapper">
+			Roll Phase
+		</span>
+		<!-- <span id="notice-ui-txt">hello world hello world </span> -->
+		<!-- <img src="https://2.bp.blogspot.com/-CJzyIpsXrR8/VaakNgVIzeI/AAAAAAAAJv0/U0IlTFJK-Bs/s1600/2015-06-27%252525252022.10.31.png" id="item_1" class="brash_1"> -->
+	</div>
+
+	<div id="description-ui" class = "notice-ui-anchor">
+		<span id="description-ui-txt" class = "notice-ui-wrapper">
+			Roll Phase
+		</span>
+		<!-- <span id="notice-ui-txt">hello world hello world </span> -->
+		<!-- <img src="https://2.bp.blogspot.com/-CJzyIpsXrR8/VaakNgVIzeI/AAAAAAAAJv0/U0IlTFJK-Bs/s1600/2015-06-27%252525252022.10.31.png" id="item_1" class="brash_1"> -->
+	</div>
+
+
+
+	<div id="top-player" class="info-ui">
+		<div class="info-ui-txt">
+			<div class="ui-vertical-container">
+				<p class="ui-diceface-description">
+					Block 1
+					<span class="img-inside-text-wrapper">
+						<img class="img-inside-text" src="/textures/dice/Axe.png">
+					</span>
+					damage
+				</p>
+
+				<p class="ui-diceface-description ui-diceface-token-description">
+					Gain 1 <span class="token-text">⌘</span>.
+				</p>
+			</div>
+			<hr>
+			<div class="ui-vertical-container dice-blue-print">
+				<div class="dice-blue-print-cell"></div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell"></div>
+
+
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+
+
+				<div class="dice-blue-print-cell"></div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell"></div>
+
+
+				<div class="dice-blue-print-cell"></div>
+				<div class="dice-blue-print-cell">
+					<img class="img-token" src="/textures/dice/Token.png">
+				</div>
+				<div class="dice-blue-print-cell"></div>
+
+
+
+
+			</div>
+			<hr>
+
+			<div class="ui-vertical-container">
+				<span class="material-symbols-outlined" style="font-size: 3rem; vertical-align:middle;">
+					mouse
+				</span>
+				<span style="vertical-align:middle"> Select</span>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div id="bottom-player" class="info-ui">
+		<div class="info-ui-txt godfavor-ui">
+			<h2 class="ui-vertical-container">
+				Thor's Strike
+			</h2>
+			<div class="ui-vertical-container">
+				<p class="ui-diceface-description">
+					Deal damage to the opponent.
+				</p>
+
+				<div
+					style="display: flex; justify-content: space-between; color:rgb(141, 141, 141); font-weight : bold; font-size: 1.0rem">
+					<div style="text-align: left;">Invoke : After</div>
+					<div style="text-align: right;">Priority : 6</div>
+				</div>
+			</div>
+			<hr>
+
+			<div class="ui-vertical-container info-godfavor-cell-container">
+				<div class="ui-vertical-container info-godfavor-cell">
+					<div style="display:flex">
+						<div class="info-godfavor-cell-token">
+							4 ⌘
+						</div>
+						<div class="info-godfavor-cell-description">
+							Deal 2 damage.
+						</div>
+					</div>
+				</div>
+
+				<div class="ui-vertical-container info-godfavor-cell">
+					<div style="display:flex">
+						<div class="info-godfavor-cell-token">
+							8 ⌘
+						</div>
+						<div class="info-godfavor-cell-description">
+							Deal 5 damage.
+						</div>
+					</div>
+				</div>
+
+				<div class="ui-vertical-container info-godfavor-cell">
+					<div style="display:flex">
+						<div class="info-godfavor-cell-token">
+							12 ⌘
+						</div>
+						<div class="info-godfavor-cell-description">
+							Deal 8 damage.
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<hr>
+			<div class="ui-vertical-container">
+				<span class="material-symbols-outlined" style="font-size: 3rem; vertical-align:middle;">
+					mouse
+				</span>
+				<span style="vertical-align:middle"> Select</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- <p id="situation-viewer">
+  </p> -->
+
+	<div id="situation-viewer" class="visible"
+		style="display : grid; grid-template-columns: 1fr 1fr; grid-template-rows: 0fr 1fr">
+		<div id="situation-header" style="grid-row : 1; grid-column : 1 / 2"> 1 </div>
+		<div id="situation-top" class="situation-cell" style="grid-row : 2; grid-column : 1">2</div>
+		<div id="situation-bottom" class="situation-cell" style="grid-row : 2; grid-column : 2">3</div>
+	</div>
+
+	<div id="timer-viewer">
+		<div id = "timer">
+			10
+		</div>
+	</div>
+
+	<script defer type="module" src="/game/script.js"></script>
+</body>
+
+</html>

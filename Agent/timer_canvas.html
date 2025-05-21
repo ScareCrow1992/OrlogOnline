@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlog-Online</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Maven+Pro&family=Noto+Serif:wght@300&family=Nanum+Pen+Script&family=Lobster&family=Lora:wght@600&family=Noto+Serif&family=Nanum+Myeongjo&family=PT+Sans&family=Tektur&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="./timer_canvas.css">
+
+</head>
+
+<body>
+    <div id = "en-body" class="font-total">hello world</div>
+    <div id = "kr-body" class="font-total">플레이</div>
+    <canvas id="timer-display"></canvas>
+
+    <script>
+        console.log("hello world")
+        const canvas = document.getElementById("timer-display");
+        const ctx = canvas.getContext('2d');
+        canvas.width = 480;
+        canvas.height = 270;
+
+
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.save()
+
+        DrawText("29")
+        DrawText("7")
+
+        ctx.restore()
+
+        function DrawText(txt){
+            ctx.clearRect(120, 0, 240, 270);
+
+            ctx.save()
+
+            ctx.fillStyle = "rgb(0,0,0)"
+            ctx.fillRect(0, 0, 480, 270)
+
+
+            ctx.lineWidth = 3;
+            ctx.font = '16rem Tektur'
+            ctx.textAlign = 'left'
+            ctx.strokeStyle = "rgba(255, 255, 255)"
+            ctx.fillStyle = "rgba(255, 255, 255)"
+
+
+            let textWidth = ctx.measureText(txt).width;
+            let textHeight = ctx.measureText(txt).actualBoundingBoxAscent + ctx.measureText(txt).actualBoundingBoxDescent;
+            
+            let cX = canvas.width / 2 - (textWidth / 2);
+            let cY = canvas.height / 2 + (textHeight / 2);
+
+            ctx.fillText(txt, cX, cY);
+
+            ctx.restore()
+        }
+
+        function DrawCircle(cx, cy, color){
+            ctx.save()
+
+            ctx.strokeStyle = color
+            ctx.fillStyle = color
+            // ctx.fillStyle = "#00ff00"
+            
+            ctx.beginPath()
+            ctx.arc(cx, cy, 30, 0, 2 * Math.PI)
+            ctx.stroke()
+            ctx.closePath()
+            ctx.fill()
+
+
+            ctx.restore()
+
+        }
+
+        DrawCircle(60, 50, "#006666")
+        DrawCircle(60, 135, "#00ffff")
+        DrawCircle(60, 220, "#00ffff")
+        
+        DrawCircle(420, 50, "#006600")
+        DrawCircle(420, 135, "#006600")
+        DrawCircle(420, 220, "#00ff00")
+
+
+        window.addEventListener("keydown", (event)=>{
+            console.log(event)
+            DrawText(event.key)
+        })
+
+
+
+
+    </script>
+
+</body>

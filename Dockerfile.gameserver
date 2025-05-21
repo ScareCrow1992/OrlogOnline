@@ -1,0 +1,11 @@
+# Game Server
+FROM node:18
+
+RUN mkdir /GameServer
+WORKDIR /GameServer
+COPY ./GameServer/package.json /GameServer/
+RUN npm install
+
+COPY ./GameServer /GameServer/
+
+CMD npm run start

@@ -1,0 +1,120 @@
+
+
+.lobby-input {
+    margin: 0 7.5%;
+    width: 70%;
+    height: 2.5rem;
+    font-size: 2rem;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(67, 67, 67);
+    color : white;
+}
+
+.lobby-user-icon{
+    height: 5rem;
+    aspect-ratio: 1/1;
+}
+
+
+.lobby-user-icon .material-symbols-outlined{
+    font-size : 5rem;
+
+}
+
+
+.lobby-user-info{
+    display:flex;
+    flex-direction: row;
+}
+
+
+#lobby-master-icon{
+    /* background-color: greenyellow; */
+    color : yellow;
+}
+
+
+#lobby-guest-icon{
+    /* background-color: red; */
+    color : rgb(190, 190, 190);
+}
+
+
+#lobby-exit-button{
+    margin: 1rem;
+    border: solid 1.5px;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    font-size: 4rem;
+    background-color: #f40;
+    /* background-image: url(/img/content-block-button.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: inset 0 0 0.15rem 0.3rem rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px black;
+
+}
+
+
+#lobby-exit-button:hover{
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 6px #fff,
+        inset 2.5px 0 10px #f40,
+        inset -2.5px 0 10px #fa0,
+        inset 2.5px 0 40px #f40,
+        inset -2.5px 0 40px #fa0,
+        0 0 25px #fff,
+        -10px 0 40px #f40,
+        10px 0 40px #fa0;
+
+}
+
+
+
+#lobby-exit-button:active{
+    transform: translate(0, 4px);
+
+}
+
+
+#lobby-number-copy-icon{
+    margin: 1rem;
+    border: solid 1.5px;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    font-size: 4rem;
+    background-color: #3FC0AC;
+    /* background-image: url(/img/content-block-button.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    box-shadow: inset 0 0 0.15rem 0.3rem rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 4px black;
+}
+
+
+#lobby-number-copy-icon:hover{
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 6px #fff,
+        inset 2.5px 0 10px #0fa,
+        inset -2.5px 0 10px #0ff,
+        inset 2.5px 0 40px #0fa,
+        inset -2.5px 0 40px #0ff,
+        0 0 25px #fff,
+        -10px 0 40px #0fa,
+        10px 0 40px #0ff;
+
+}
+
+
+#lobby-number-copy-icon:active{
+    transform: translate(0, 4px);
+
+}
+

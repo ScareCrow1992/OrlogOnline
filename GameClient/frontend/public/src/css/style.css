@@ -1,0 +1,549 @@
+@charset "UTF-8";
+
+
+/* font-style: normal;
+font-weight: 300; */
+
+@font-face {
+    font-family: "lora";
+    src : url("https://storage.orlog.io/fonts/Lora-VariableFont_wght.ttf");
+    unicode-range: U+0041-005A, U+0061-007A;
+    font-weight: 600;
+} 
+
+
+@font-face {
+    font-family: "lora";
+    src : url("https://storage.orlog.io/fonts/NanumGothic-Bold.ttf");
+    unicode-range: U+AC00-D7A3;
+    font-weight: 600;
+} 
+
+
+
+@font-face {
+    font-family: "PT Sans";
+    src : url("https://storage.orlog.io/fonts/PTSans-Regular.ttf");
+    unicode-range: U+0041-005A, U+0061-007A;
+    /* font-weight: 600 */
+} 
+
+
+@font-face {
+    font-family: "PT Sans";
+    src : url("https://storage.orlog.io/fonts/NanumGothic-Bold.ttf");
+    unicode-range: U+AC00-D7A3;
+    font-weight: 600
+} 
+
+
+* {
+    box-sizing: border-box;
+    letter-spacing: 0.1rem;
+    line-height: 1.8rem;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    /* z-index : auto; */
+
+    /* margin: 0px;
+    padding: 0px; */
+}
+
+
+
+/* ul,
+ol {
+    list-style: none;
+} */
+
+a {
+    text-decoration: none
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* overflow: scroll; */
+    overflow: hidden;
+    color: #000000;
+}
+
+
+
+#webpage-root {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#virtual-menu-button {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#header {}
+
+
+
+#menu * {
+    font-family: 'Lora', serif;
+}
+
+
+
+.menu-button {
+    color: white
+}
+
+#view {
+    /* 06151F */
+
+    background: url("/img/view-noise.png");
+    background-color: #06151F;
+    /* background-repeat: round; */
+    background-size: cover;
+    height: 100%;
+    color: white;
+
+    
+    overflow: auto;
+    height: 100%;
+
+}
+
+
+
+
+#view::-webkit-scrollbar {
+    width: 10px;
+}
+
+#view::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#view::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: gray;
+}
+
+#view::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+#logo:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+#match-alert-title{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 200;
+    color: #cc4925;
+    
+}
+
+#match-alert-loading-icon{
+    display:block;
+    height:5rem;
+}
+
+
+
+
+.lds-dual-ring {
+    position: absolute;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 0.5rem solid #fff;
+    border-color: #fff transparent #fff transparent;
+    right:9.5rem;
+}
+
+
+#check-wrapper{
+    position : absolute;
+    display: inline-block;
+    width : 5rem;
+    height : 5rem;
+    right: 9.5rem;
+    margin: 0.5rem;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 50px;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 4;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142
+    }
+}
+
+
+
+#match-cancle-button{
+    margin: 1rem 0rem 2rem 0rem;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    border: solid 1.5px;
+    border-radius: 2rem;
+    margin: 3.5rem 1.5rem 0 1.5rem;
+    padding:0.5rem 0;
+    background-color: #984623;
+    box-shadow: inset 0 0 0.15rem 0.3rem rgba(0, 0, 0, 0.5);
+    /* transition: box-shadow 0.5s; */
+    color:white;
+
+}
+
+
+
+#match-cancle-button:hover{
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 6px #fff,
+        inset 2.5px 0 10px #cc4925,
+        inset -2.5px 0 10px #ff0000,
+        inset 2.5px 0 40px #cc4925,
+        inset -2.5px 0 40px #ff0000,
+        0 0 25px #fff,
+        -10px 0 40px #cc4925,
+        10px 0 40px #ff0000;
+}
+
+
+
+#notice-anchor{
+    position : absolute;
+    left : 50%;
+    top : 50%;
+}
+
+
+#notice-origin{
+    position : relative;
+    z-index: 30;
+}
+
+
+#notice-logo{
+    position : absolute;
+    width : 8rem;
+    top : -4rem;
+    left : 8rem;
+}
+
+
+#notice-block{
+    position : absolute;
+    width : 24rem;
+    height: 10rem;
+    right : -12rem;
+    bottom : -9rem;
+    transform: scale(0, 0) translate(0, -50%);
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* background: no-repeat 110% 65%/180% url(/img/orlog-logo2.png), url(/img/header-noise.png), linear-gradient(#0c2220 0%, #1C7369 75%, #0C3832 100%); */
+
+
+
+#notice-block.visible {
+    transform: scale(1, 1) translate(0, -50%);
+    /* transition-timing-function : jump-end; */
+    transition-duration: 0.5s;
+}
+
+
+
+#notice-title{
+    /* background-color: #202123; */
+    background: linear-gradient(0.25turn, #383a3d 0%, #202123 15%, #202123 85%, #383a3d 100%);
+    flex-grow: 0;
+    color : white;
+    padding : 1rem;
+    font-size : 2rem;
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+    border:solid;
+    border-color:gray;
+    border-width: 0.12rem;
+}
+
+
+#notice-main{
+    position : relative;
+    background:
+        url("/img/valknut-background.png"),
+        radial-gradient(circle farthest-corner at 50% 0%,
+        #FEBE3ADD 0%, #9B6A29DD 25%, #5B3D16DD 50%, #32210BDD 75%);
+    /* background-image: url("/img/valknut-background.png");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0.5rem 0.5rem #ab7f2755;
+    /* box-shadow: inset 0.1rem 0.1rem 1rem #ab7f2755,
+        inset 0.1rem -0.1rem 1rem #ab7f2755,
+        inset -0.1rem 0.1rem 1rem #ab7f2755,
+        inset -0.1rem -0.1rem 1rem #ab7f2755; */
+    
+    flex-grow: 1;
+    border:solid;
+    border-color:gray;
+    border-width: 0.12rem;
+
+}
+
+
+
+#notice-description{
+    margin : 2rem 0 0 0;
+    font-size : 2rem;
+    text-align : center;
+    color : white;
+    text-shadow: 0.2rem 0.2rem 0.15rem black;
+}
+
+
+#notice-buttons{
+    position : absolute;
+    width : 24rem;
+    bottom : 0;
+
+    /* background-color: greenyellow; */
+
+    display : flex;
+    flex-direction: row;
+
+}
+
+
+#notice-buttons *{
+    margin : 1rem;
+    padding : 0.5rem;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    width : 8rem;
+    border-radius: 2rem;
+    box-shadow:inset 0 0 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
+    color:white;
+    
+    text-shadow: 
+    1px 1px 2px black,
+    1px -1px 2px black,
+    -1px 1px 2px black,
+    -1px -1px 2px black;
+
+
+    border:solid;
+    border-color: gray;
+}
+
+#notice-buttons *:hover{
+    cursor:pointer;
+    border-color: white;
+
+}
+
+#notice-button-accept{
+    background:
+        url("/img/pattern01.png"),
+        radial-gradient(#0ff 25%, skyblue 50%, #0af 75%);
+    background-size: cover;
+    
+}
+
+
+#notice-button-accept:hover{
+    box-shadow:
+        inset 0 0 6px #fff,
+        inset 2.5px 0 10px #0af,
+        inset -2.5px 0 10px #0ff,
+        inset 2.5px 0 40px #0af,
+        inset -2.5px 0 40px #0ff,
+        0 0 25px #fff,
+        -10px 0 40px #0af,
+        10px 0 40px #0ff;
+}
+
+
+#notice-button-decline{
+    background:
+        url("/img/pattern01.png"),
+        radial-gradient(#fc0 25%, orange 50%, #f40 75%);
+    background-size: cover;
+}
+
+
+
+#notice-button-decline:hover{
+    box-shadow:
+        inset 0 0 6px #fff,
+        inset 2.5px 0 10px #f40,
+        inset -2.5px 0 10px #fa0,
+        inset 2.5px 0 40px #f40,
+        inset -2.5px 0 40px #fa0,
+        0 0 25px #fff,
+        -10px 0 40px #f40,
+        10px 0 40px #fa0;
+}
+
+
+
+
+#user_profie_wrapper{
+    display : none;
+    width : 100%;
+	flex-direction: row;
+    cursor: pointer;
+    /* background-color: #7ac142; */
+}
+
+.user_profile_picture{
+    flex-grow: 0;
+    width : 3.5rem;
+    border-radius: 1rem;
+    border: 0.3rem solid #ccaa44;
+    box-shadow: 3px 3px 6px black;
+}
+
+
+
+.user_profile_name{
+    flex-grow: 1;
+    color: white;
+    margin : 0 0 0 0.5rem;
+    font-size: 1.35rem;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+}
+
+
+
+#view a{
+    color : #0FC4B2;
+    font-weight: bold;
+}
+
+
+/* .styled_scroll{
+    overflow: auto;
+}
+
+
+.styled_scroll *{
+    overflow: visible
+} */
+
+
+
+
+
+.setting-contents-flex{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.setting-content-container{
+    font-size : 2.5rem;
+    color : #aaaaaa;
+    font-weight : 600;
+    cursor: pointer;
+}
+
+
+.setting-content-container:hover{
+    /* border:solid; */
+    font-size : 2.5rem;
+    color : white;
+    text-shadow: 0px -1px 1px black,1px 1px 1px black, -1px 1px 1px black, 1px 1px 8px yellow, 1px -1px 8px yellow, -1px 0px 8px yellow, -1px -1px 8px yellow;
+}
+
+.setting-content-container:active{
+    transform: translate(0, 2px);
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg2"
+   sodipodi:docname="ragnarok_token.svg"
+   viewBox="0 0 384.48 436.29"
+   version="1.1"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs18" />
+  <title
+     id="title3324">Snowflake (Monchrome; Icon)</title>
+  <sodipodi:namedview
+     id="base"
+     bordercolor="#666666"
+     inkscape:pageshadow="2"
+     inkscape:window-y="-11"
+     fit-margin-left="0"
+     pagecolor="#ffffff"
+     inkscape:window-height="1494"
+     inkscape:window-maximized="1"
+     inkscape:zoom="1.4"
+     inkscape:window-x="-11"
+     showgrid="false"
+     borderopacity="1.0"
+     inkscape:current-layer="layer1"
+     inkscape:cx="-105.71429"
+     inkscape:cy="-5"
+     fit-margin-top="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:pageopacity="0.0"
+     inkscape:document-units="px"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-117.39 -169.95)">
+    <path
+       id="path8393"
+       style="fill:none;stroke:#000000;stroke-width:0.97456;stroke-dasharray:none"
+       d="m 117.39,-109.67305 c -81.536997,45.195557 -161.808791,92.563294 -242.16211,139.81055 -1.62845,93.21161 -0.74146,186.41264 0,279.625 79.909417,48.01464 161.067726,93.84687 242.16211,139.81055 81.53701,-45.19556 161.8088,-92.5633 242.16211,-139.81055 1.62846,-93.21161 0.74147,-186.41264 0,-279.625 C 279.6427,-17.877139 198.48439,-63.709368 117.39,-109.67305 Z"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       id="path398"
+       style="fill:none;stroke:#000000;stroke-width:0.97456;stroke-dasharray:none"
+       d="M 117.39 -109.67305 C 35.853003 -64.477493 -44.418791 -17.109756 -124.77211 30.1375 C -126.40056 123.34911 -125.51357 216.55014 -124.77211 309.7625 C -44.862693 357.77714 36.295616 403.60937 117.39 449.57305 C 198.92701 404.37749 279.1988 357.00975 359.55211 309.7625 C 361.18057 216.55089 360.29358 123.34986 359.55211 30.1375 C 279.6427 -17.877139 198.48439 -63.709368 117.39 -109.67305 z M 117.39 -64.104688 C 185.2687 -25.631559 253.20042 12.732805 320.08727 52.922656 C 320.7079 130.9445 321.45033 208.95613 320.08727 286.97734 C 252.82886 326.52486 185.63918 366.17451 117.39 404.00469 C 49.511303 365.53156 -18.420427 327.1672 -85.307266 286.97734 C -85.927891 208.9555 -86.670329 130.94388 -85.307266 52.922656 C -18.048866 13.375131 49.14082 -26.274505 117.39 -64.104688 z " />
+    <path
+       id="path3210"
+       style="fill:#000000;stroke-width:1;stroke-dasharray:none"
+       inkscape:connector-curvature="0"
+       d="m 117.39087,-35.12 c 6.78771,0 12.25002,5.4628 12.25002,12.25101 V 34.49705 L 149.26191,6.03203 c 2.4073,-3.4931 6.27721,-5.35501 10.20701,-5.31561 2.3578,0.0236 4.73851,0.73323 6.83441,2.17761 5.589,3.8517 6.98961,11.452 3.138,17.04101 l -39.80004,57.75704 v 24.72402 46.31103 l 61.52007,-35.52302 30.11803,-63.34105 c 2.9144,-6.1302 10.19601,-8.72141 16.32702,-5.807 2.2988,1.0929 4.1051,2.8053 5.3045,4.8354 1.9989,3.3835 2.324,7.65981 0.50251,11.49101 l -14.84101,31.22402 49.67205,-28.67802 c 5.87831,-3.3938 13.34602,-1.389 16.74002,4.4893 3.3938,5.87831 1.389,13.33501 -4.48921,16.72902 l -49.68305,28.67802 34.47304,2.7695 c 4.2288,0.3382 7.77361,2.7526 9.70441,6.1755 1.1584,2.05371 1.7328,4.47581 1.5299,7.01301 -0.5411,6.7661 -6.42251,11.77501 -13.18901,11.23401 l -69.91808,-5.59481 -61.52007,35.52303 40.11305,23.16102 21.40802,12.36201 69.91808,-5.58361 c 6.766,-0.54114 12.64701,4.46821 13.18901,11.23401 0.2029,2.5372 -0.37147,4.9593 -1.5299,7.01301 -1.9308,3.4229 -5.47561,5.8372 -9.70441,6.1755 l -34.46204,2.7583 49.67205,28.67802 c 5.87831,3.39381 7.88311,10.86101 4.48921,16.74001 -3.3938,5.87831 -10.86101,7.87191 -16.74002,4.47811 l -49.67205,-28.67802 14.84101,31.22402 c 1.8215,3.8313 1.4964,8.11881 -0.50251,11.50201 -1.1994,2.0302 -3.0057,3.7314 -5.3045,4.8243 -6.13011,2.9144 -13.41202,0.33437 -16.32702,-5.7958 l -30.11803,-63.35205 -61.52007,-35.52302 v 46.32203 24.72402 l 39.80004,57.75704 c 3.85161,5.5891 2.451,13.19001 -3.138,17.04101 -2.0959,1.4444 -4.47661,2.154 -6.83441,2.1776 -3.9297,0.0393 -7.79961,-1.8225 -10.20701,-5.3156 l -19.62102,-28.46502 v 57.36604 c 0,6.78761 -5.46281,12.25001 -12.25002,12.25001 -6.7877,0 -12.25001,-5.4628 -12.25001,-12.25001 v -57.36604 l -19.621019,28.46502 c -2.4073,3.4931 -6.27721,5.3549 -10.20701,5.3156 -2.35781,-0.0236 -4.73851,-0.73325 -6.83441,-2.1776 -5.58901,-3.8516 -6.98971,-11.45201 -3.138,-17.04101 L 105.14146,262.20892 V 237.4849 191.16287 l -40.124039,23.16101 -21.40803,12.36201 -30.11803,63.35205 c -2.9144,6.1302 -10.1960104,8.7102 -16.3270204,5.7958 -2.2988,-1.0929 -4.1051,-2.7941 -5.3044,-4.8243 -1.9989096,-3.3835 -2.3240096,-7.67101 -0.50254,-11.50201 l 14.85202,-31.23502 -49.6830506,28.68902 c -5.87821,3.3938 -13.33502,1.4002 -16.72902,-4.47811 -3.39391,-5.8783 -1.4002,-13.346 4.4781,-16.74001 l 49.6720606,-28.67802 -34.4620406,-2.7583 c -4.22881,-0.33824 -7.77361,-2.7526 -9.70441,-6.1755 -1.1584,-2.05371 -1.7328,-4.47581 -1.5299,-7.01301 0.54114,-6.7661 6.4225,-11.77501 13.18901,-11.23401 l 69.918081,5.58361 21.40802,-12.36201 40.12405,-23.16102 -61.53207,-35.52303 -69.918081,5.59481 c -6.76601,0.54114 -12.64701,-4.46821 -13.18901,-11.23401 -0.2029,-2.5373 0.37149,-4.9593 1.5299,-7.01301 1.9308,-3.4229 5.4756,-5.8373 9.70441,-6.1755 L -6.0414894,112.83601 -55.72455,84.14699 c -5.8783,-3.39381 -7.87201,-10.85001 -4.4781,-16.72902 3.3938,-5.8783 10.85001,-7.8831 16.72902,-4.4893 L 6.2094206,91.61769 -8.6425994,60.38267 c -1.8214996,-3.8313 -1.4963996,-8.10761 0.50254,-11.49101 1.1994,-2.0302 3.0057,-3.7425 5.3044,-4.8354 6.13011,-2.91441 13.4120204,-0.32319 16.3270204,5.807 l 30.11803,63.34105 61.532069,35.52302 V 102.4163 77.69228 L 65.341421,19.93524 c -3.85161,-5.58911 -2.45101,-13.19001 3.138,-17.04101 2.0959,-1.4444 4.4766,-2.15401 6.83441,-2.17761 3.9297,-0.0394 7.79961,1.82251 10.20701,5.31561 l 19.621019,28.46502 v -57.36604 c 0,-6.78771 5.46281,-12.25101 12.25001,-12.25101 z"
+       sodipodi:nodetypes="csccsccccccccccccccccsscccccccsccccccccscccccccsccsssccssccccccccccccccccsccccccccccccccccccccccccccccscc" />
+  </g>
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Snowflake (Monchrome; Icon)</dc:title>
+        <dc:date>2011-01-23T01:27:02</dc:date>
+        <dc:description>Monochrome snowflake icon</dc:description>
+        <dc:source>https://openclipart.org/detail/109747/snowflake---monochrome-by-uroesch</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>uroesch</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Black &amp; White</rdf:li>
+            <rdf:li>Icon</rdf:li>
+            <rdf:li>Monochrome</rdf:li>
+            <rdf:li>Snowflake</rdf:li>
+            <rdf:li>Symbol</rdf:li>
+            <rdf:li>coloring book</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

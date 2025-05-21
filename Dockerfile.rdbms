@@ -1,0 +1,22 @@
+FROM mariadb:11
+
+SHELL ["/bin/bash", "-c"]
+
+RUN apt update
+RUN apt upgrade -y
+RUN apt install iputils-ping
+
+RUN apt-get update
+RUN apt-get upgrade -y
+
+RUN apt-get install net-tools
+
+RUN apt-get install iptables -y
+RUN apt-get install netcat -y
+RUN apt-get install vim -y
+
+# RUN iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+# RUN iptables -I INPUT -p tcp --dport 4444 -j ACCEPT
+# RUN iptables -I INPUT -p tcp --dport 4567 -j ACCEPT
+# RUN iptables -I INPUT -p tcp --dport 4568 -j ACCEPT
+# RUN iptables -I INPUT -p udp --dport 4567 -j ACCEPT

@@ -1,0 +1,46 @@
+{
+    "menu-button-play":{
+        "en" : "Play",
+        "kr" : "플레이"
+    },
+    "menu-button-guide":{
+        "en" : "Guide",
+        "kr" : "가이드"
+    },
+    "menu-button-news":{
+        "en" : "News",
+        "kr" : "뉴스"
+    },
+    "menu-button-about":{
+        "en" : "About",
+        "kr" : "소개"
+    },
+    "menu-button-lobby":{
+        "en" : "Lobby",
+        "kr" : "친선전"
+    },
+    "menu-button-contact":{
+        "en" : "Contact",
+        "kr" : "연락"
+    },
+    "home-play-block-desc":{
+        "en" : "Choise the game mode that play want.",
+        "kr" : "원하는 게임 모드를 선택합니다."
+    },
+    "token-description":{
+        "en" : "Gain 1 <span class=\"token-text\">⌘</span>.",
+        "kr" : "<span class=\"token-text\">⌘</span> 을 1개 얻습니다."
+    },
+    "additional-input-bottom" : {
+        "en" : "additional input",
+        "kr" : "추가 입력"
+    },
+    "additional-input-top" : {
+        "en" : "additional input",
+        "kr" : "추가 입력"
+    },
+    "home-desc" : {
+        "en" : "<p>Orlog is a mini game of Assasin's Creed Valhalla. It's abstract strategy board game where two players compete with dices and Godfavor cards with unique abilities.</p><p>orlog.io is an unofficial fan-made adaptation of the game. Unlike the original game, which was only able to compete against NPCs, it is an online game that can enjoy with users from all over the world!</p><p>It's completely free to play.</p>",
+        "kr" : "<p>올로그는 어쌔신 크리드 발할라의 인게임 컨텐츠로, 고유한 능력을 지닌 신의 은총 카드와 주사위를 사용하여 두 플레이어가 겨루는 추상전략 보드게임입니다.</p><p>orlog.io는 이를 각색하여 만든 비공식 팬메이드 게임이며, 오직 게임내 NPC와의 플레이만 가능했던 원작과 달리 전세계 유저들과 즐길 수 있는 온라인 게임입니다.</p><p>지금 당장 무료로 즐겨보세요!</p>"
+    }
+}

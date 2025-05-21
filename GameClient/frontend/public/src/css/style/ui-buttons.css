@@ -1,0 +1,95 @@
+#ui-buttons-origin{
+    display : flex;
+	flex-direction: row;
+    position : absolute;
+    /* background-color: red; */
+    /* border : solid; */
+    /* width: 5rem; */
+    /* height : 10rem; */
+
+    bottom : 0rem;
+    right : 0rem;
+
+}
+
+
+.ui-button-container{
+    position : relative;
+    width : 4.5rem;
+    height : 4.5rem;
+    margin : 0.5rem;
+    /* background-color: greenyellow; */
+    cursor : pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity : 0.5;
+}
+
+.ui-button-container:hover{
+    opacity : 0.9;
+}
+
+
+#surrender-button .ui-button-icon{
+    background-image: url("/img/icon/flag_square.png")
+
+}
+
+
+#bgm-button.on .ui-button-icon{
+    background-image: url("/img/icon/musicOn.png")
+
+
+
+}
+
+#bgm-button.off .ui-button-icon{
+    background-image: url("/img/icon/musicOff.png")
+
+
+}
+
+
+#sfx-button.on .ui-button-icon{
+    background-image: url("/img/icon/audioOn.png")
+
+
+}
+
+#sfx-button.off .ui-button-icon{
+    
+    background-image: url("/img/icon/audioOff.png")
+
+}
+
+.ui-button-icon{
+    position : absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width : 100%;
+    height : 100%;
+}
+
+
+.slidecontainer{
+    transform : translate(0%, 60%)
+}
+
+
+.ui-button-container:hover .slidecontainer{
+    opacity : 0.9;
+    transform : translate(0%, -100%)
+}
+
+
+
+.slidecontainer input[type="range"][orient="vertical"]{
+    writing-mode: bt-lr;
+    appearance: slider-vertical;
+    width : 100%;
+}
+
+
+.slidecontainer input:hover{
+    cursor:pointer
+}

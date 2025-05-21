@@ -1,0 +1,157 @@
+
+@media screen and (min-width:992px) and ((max-width: 1330px)) {
+    /* 타블렛 */
+    
+    /* layout */
+    #webpage-root{
+        display : flex;
+        flex-direction: row;
+
+    }
+
+    #header {
+        position: absolute;
+        flex-grow: 0;
+    }
+
+
+    #logo-text{
+        display: none;
+    }
+
+
+    #menu{
+        display : none;
+        right : 100%;
+        
+    }
+
+    #header:hover #menu{
+        display : block;
+        right : 0%
+
+    }
+
+    #header:hover #logo-text{
+        display : block;
+
+    }
+
+    #view{
+        flex-grow: 1;
+        margin : 0 0 0 4rem;
+    }
+
+ 
+    #menu-button-label{
+        display : none;
+        float:left;
+    }
+    
+
+
+
+
+
+
+
+    #header {
+        background: 
+        /* url("/img/header_noise.png"); */
+        no-repeat 110% 65%/180%  url("/img/orlog-logo2.png"),
+        url("/img/header-noise.png"), linear-gradient(
+                #0c2220 0%,
+                #1C7369 75%,
+                #0C3832 100%);
+        /* padding : 1rem */
+        height: 100%;
+    }
+
+
+
+    #menu {
+        /* background: yellowgreen */
+    }
+
+    #view {
+        /* background: white */
+    }
+
+
+    .icon-img {
+        /* align-self: center; */
+        margin: 0.4rem 0rem;
+        align-self: auto;
+        object-fit: contain;
+        flex-grow: 0;
+        margin: 0.5rem;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        height: 5rem;
+        width: auto;
+        margin: 0.5rem;
+    }
+
+
+    #menu *{
+        margin : 0;
+        flex-grow: 1;
+        /* position : relative; */
+        line-height: 4.5rem;
+        font-size : 2.5rem
+        
+    }
+
+
+    /* .menu-button{
+        background: linear-gradient(to left, #00000000 50%, #40C1A6 50%) right;
+        background-size: 200%;
+        transition: .3s ease;
+        padding : 0 0 0 4rem;
+    }
+
+
+    .menu-button:hover{
+        background-position: left;
+        cursor:pointer;
+    } */
+
+    .menu-button {
+        text-indent: 4rem;
+        position:relative;
+
+    }
+
+    .menu-button-highlight{
+        position : absolute;
+        background : #40C1A6;
+        height : 4.5rem;
+        width : 100%;
+        top : 0rem;
+        right : 100%;
+        z-index : 1;
+        transition: .3s ease-in-out;
+        transition-property: transform;
+    }
+
+
+    .menu-button:hover{
+        cursor:pointer;
+
+    }
+
+    .menu-button:hover .menu-button-highlight{
+        transform: translate(100%, 0%);
+    }
+
+
+    .menu-button-txt{
+        position : relative;
+        z-index: 10;
+        text-shadow: 4px 4px 4px black;
+    }
+
+}

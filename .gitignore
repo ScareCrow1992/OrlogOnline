@@ -1,0 +1,18 @@
+GameClient/node_modules/
+GameServer/node_modules/
+EngineServer/node_modules/
+SocketServer/node_modules/
+RedisWorker/node_modules/
+Backend/node_modules/
+MatchMaker/node_modules/
+Agent/node_modules/
+Agent/logs/
+Test/node_modules/
+blessed_study/blessed/
+Agent/tf_datas/
+Agent/tf_models/
+Agent/tf_datas.zip
+Agent/tf_models.zip
+
+
+# Agent/

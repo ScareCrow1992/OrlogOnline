@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="naver-site-verification" content="a90c8823df60d38371c9960d71f6d21d31624ba9" />
+    <title>Orlog Online</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Maven+Pro&family=Noto+Serif:wght@300&family=Lora:wght@600&family=Noto+Serif&family=Nanum+Myeongjo&family=PT+Sans&family=Tektur&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <!-- <script src="https://accounts.google.com/gsi/client"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    
+
+    </script>
+
+</head>
+
+<body style="margin : 0">
+    
+
+
+    <div style="
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(/img/view-noise.png); 
+        background-color: #06151F; 
+        background-repeat: round; 
+        background-size: cover; 
+        width: 100vw; 
+        height: 100vh;">
+
+        <div id="gate_header" style="
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;">
+            <div style="
+                    content : url(https://storage.orlog.io/img/side_logo.png);
+                    transform: rotate(270deg);
+                    height: 33%;"></div>
+            <div style="
+                    width:18rem;
+                    font-size : 2.9rem;
+                    font-family: 'Noto Serif', serif;
+                    color : white;
+                    text-align : center;">orlog.io</div>
+            <div style="
+                    content : url(https://storage.orlog.io/img/side_logo.png);
+                    transform: rotate(90deg);
+                    height: 33%;"></div>
+        </div>
+        <div id="gate_screenshot" style="
+                content : url(https://storage.orlog.io/img/screenshot_0.jpg);
+                height: 70%;"></div>
+
+        <div style = "position : relative; margin: 3rem;">
+            <div id="gate_startbutton" style="
+                /* position:absolute; */
+                padding: 0.1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.9rem;
+                color:white;                    
+                /* background-image: url(/img/content-block-button.png); */
+                background-color: #06AD9B;
+                border-radius : 4px;
+                border:solid 3px;                
+                width: 13rem;
+                height: 3rem;
+                cursor: pointer;
+                text-shadow: 1.5px 1.5px 3px black;    
+                font-family: 'PT Sans', sans-serif;" onmouseover="this.style.backgroundColor='#035E54'"
+                onmouseout="this.style.backgroundColor='#06AD9B';">
+                Play Now
+            </div>
+            <div id = "gate_login" style="
+                display:none;
+                opacity : 0;
+                position:absolute;
+                top: 15%;
+                left : 0%;">
+            </div>
+        </a>
+        
+    </div>
+
+
+    <script type="module">
+
+        if(window.innerWidth < 900){
+            var nElement = document.createElement('div');
+            
+            nElement.style.position = "absolute"
+            // nElement.style.width = "100vw"
+            nElement.style.height = "100vh"
+            nElement.style.backgroundColor = "#000000"
+            nElement.style.color = "#ffffff"
+            nElement.style.display = "flex"
+            nElement.style.alignItems = "center"
+            nElement.style.padding = "5%"
+            nElement.style.fontSize = "1.5rem"
+            nElement.style.top = 0
+
+            nElement.innerText = "It's confirmed that you accessed the site with your mobile device. I'm sorry, but this game is not available on your mobile device. Please access it on your computer."
+
+            let a = document.body.children[0]
+            document.body.removeChild(a)
+
+            document.body.appendChild(nElement)
+
+        }
+        else{
+
+            let dom_ = document.getElementById("gate_startbutton")
+            let login_dom = document.getElementById("gate_login")
+
+            // google.accounts.id.initialize({
+            //     client_id: "<client id>",
+            //     auto_select: false,
+            //     close_on_tap_outside: false,
+            //     popup : "popup",
+            //     callback : handleCredentialResponse
+            // });
+            // google.accounts.id.renderButton(
+            //     login_dom,
+            //     {
+            //         theme: "outline",
+            //         size: "large",
+            //     }  // customization attributes
+            // );
+            // google.accounts.id.prompt(); // also display the One Tap dialog
+
+
+            dom_.addEventListener("click", () => {
+
+                localStorage.setItem("oauth_response", "hello")
+                location.href = "http://localhost:3000/oauth/google/endpoint"
+
+
+                dom_.animate([{ opacity: 1 }, { opacity: 0 }], { fill: "forwards", duration: 500 })
+
+                setTimeout(() => {
+                    // dom_.style.display = "none"
+                }, 500)
+
+                login_dom.animate([{ opacity: 0 }, { opacity: 1 }], { fill: "forwards", duration: 500 })
+                login_dom.style.display = "block"
+            })
+
+        }
+
+
+        function handleCredentialResponse(response) {
+
+            responsePayload = parseJwt(response.credential);
+            sub = responsePayload.sub
+            idToken = response.credential;
+            
+            localStorage.setItem("oauth_response", JSON.stringify(response))
+
+            const config_ = {headers: { Authorization: `Bearer ${idToken}` }}
+            const bodyParameters = { key: "value" };
+            
+            location.href = "http://localhost:3000/oauth/google/endpoint"
+            
+
+        }
+
+        
+        function parseJwt(token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+
+            return JSON.parse(jsonPayload);
+        }
+
+
+    </script>
+
+</body>
