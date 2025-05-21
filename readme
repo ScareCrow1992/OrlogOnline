@@ -3,7 +3,7 @@
 https://www.youtube.com/watch?v=zSa8XJc0aY4
 
 [document]
-https://grand-pajama-ca5.notion.site/6340a97773284f6782a3dbeac6c1fc08
+https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 
 1. docker container build
 docker-compose --env-file=./ENV/dev.cfg build
