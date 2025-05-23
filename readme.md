@@ -38,7 +38,10 @@ https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 
 # 4. 시스템 개요
 ![alt text](Images/architect.png)
-> 위 이미지는 `Node`당 동시접속자 3000명 시나리오를 가정하고 진행한 부하 테스트 당시의 시스템 개요도 이다. 실제 운영 당시에는 단일서버 환경에서 축소된 상태로 가동되었음.
+> 위 이미지는 `Node`당 웹소켓 동시접속자 3000명 시나리오를 가정하고 진행한 부하 테스트 당시의 시스템 개요도 이다. 실제 운영 당시에는 단일서버 환경에서 축소된 상태로 가동되었음.
+
+> 이벤트루프를 싱글스레드로 관리하는 Node의 특성상 성능 확장을 위해선 필연적으로 Node 인스턴스의 갯수를 늘려야만 한다. 다중 Node 환경에서의 시스템 정상 가동 여부 및 부하분산 테스트를 위해 다수의 시스템을 가동하였음
+
 
 
 ## 4-1. 구조 요약
@@ -86,8 +89,16 @@ https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 - 자동화 부하 테스트 시스템을 구현, `Node`당 동시접속자 3000명 시나리오를 가정하여 테스트 진행
 
 
+
+# 7. 상세 설명
+본 프로젝트에 대한 보다 자세한 기술적 설명은 아래 첨부된 링크에서 확인가능하다.
+
 [Detail Document]
 https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 
 
+# 8. 빌드 & 가동 가이드
+본 프로젝트의 빌드 & 가동 가이드는 아래 문서에서 확인 가능하다.
 
+[Build & Run Guide]
+https://grand-pajama-ca5.notion.site/orlog-io-1f2e6f9328198025817df2fd8a7affb6
