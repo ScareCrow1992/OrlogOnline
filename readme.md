@@ -3,16 +3,8 @@
 
 
 
+## 📽 [▶ 유튜브 플레이 영상 보기](https://www.youtube.com/watch?v=zSa8XJc0aY4)
 
-
-[Video]
-https://www.youtube.com/watch?v=zSa8XJc0aY4
-
-[Build & Run Guide]
-https://grand-pajama-ca5.notion.site/orlog-io-1f2e6f9328198025817df2fd8a7affb6
-
-[Detail Document]
-https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 
 
 # 1. Orlog 란?
@@ -73,21 +65,29 @@ https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 
 
 
-# 6. 핵심 기능
-- Three.js를 이용한 웹기반 게임 클라이언트 개발
-- Redis 활용
-  - 서버간 공용 데이터를 `read/write` 하여 유저의 연결 정보를 모든 시스템이 동시 확인 가능
-  - `Pub/Sub` 을 이용한 서버간 통신 매개체 기능 담당
-  - `zAdd`와 `zRangeByScore`, `zRemRangeByScore` 명령어로 `스케줄링` 기능 구현
-  - `RPUSH`와 `BLPOP` 명령어로 `메시지 큐` 구현
-  - `Lua` 스크립트로 조건 판단과 데이터 갱신을 단일 트랜잭션으로 실행
-- 구글 OAuth 기술과 연동하여 웹 소켓 연결시 유저 연결 및 자격 검증 구현
-- GCP Load Balancer를 이용하여 웹소켓 서버 연결시 부하분산 적용
-- 다수의 `웹소켓 서버`와 `게임로직 서버`가 분리 가동되는 환경을 구성
-  - 서로다른 `웹소켓 서버`에 연결된 유저끼리도 매칭 가능
-- `CloudFlare R2`를 `CDN`으로 활용하여, 네트워크 비용 최소화
-- 자동화 부하 테스트 시스템을 구현, `Node`당 동시접속자 3000명 시나리오를 가정하여 테스트 진행
+# 6. 이 프로젝트로 증명한 실무 역량
 
+1. **실시간 게임 트래픽 처리 경험**
+   - Node.js 기반 로직 서버 + WebSocket 서버 분리 구조
+   - Redis Pub/Sub을 이용한 다중 서버 간 유저 매칭/통신 구현
+   - 서로 다른 서버에 붙은 유저들 간 실시간 PvP 완전 구현
+   - 부하 테스트 도구 제작 → 동시 접속자 3,000~10,000 명 테스트 성공
+
+2. **운영 환경 구축 및 최적화**
+   - GCP Load Balancer + PM2 + Docker로 서버 자동 확장 구조 구성
+   - Redis `zAdd`, `zRemRangeByScore` → 매칭 큐/스케줄링 로직 구성
+   - Redis Lua Script로 DB 락 없이 atomic 갱신 로직 구현
+
+3. **서비스 최적화 및 보안**
+   - OAuth 기반 사용자 인증과 WebSocket 연결 연동
+   - Cloudflare R2 CDN 적용 → 클라이언트 자산 전송 최적화 및 비용 절감
+
+4. **개발 외 요소: 테스트 및 검증**
+   - CLI 기반 부하 테스트 스크립트 직접 구현
+   - 다양한 트래픽 시나리오 대응 (1:1, 병렬 접속, 재접속)
+
+👉 **이 프로젝트는 단순한 게임 구현이 아니라,  
+실시간 네트워크 서비스의 설계·개발·운영을 1인으로 감당한 기록입니다.**
 
 
 # 7. 상세 설명
