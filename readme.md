@@ -37,7 +37,7 @@
    - 부하 테스트 도구 제작 → 동시 접속자 3,000~10,000 명 테스트 성공
 
 2. **운영 환경 구축 및 최적화**
-   - GCP Load Balancer + PM2 + Docker로 서버 자동 확장 구조 구성
+   - GCP Load Balancer + PM2 + Docker로 수직/수평적으로 확장 가능한 서버 환경 구성
    - Redis `zAdd`, `zRemRangeByScore` → 매칭 큐/스케줄링 로직 구성
    - Redis Lua Script로 DB 락 없이 atomic 갱신 로직 구현
 
