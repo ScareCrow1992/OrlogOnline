@@ -4,13 +4,6 @@ import Get_Random_Battle from "../test/Get_Random_Battle.js"
 import AddResult from "./AddResult.js"
 
 
-let users = [
-    { id: "77775555", email: "ahri@naver.com" },
-    { id: "354364553453", email: "gogowjdgo1@gmail.com" },
-    { id: "6563454312", email: "pixelbot@gmail.com" },
-    { id: "54646254342", email: "yohoho@daum.net" },
-    { id: "54654757345234", email :"choose@samsung.com"}
-]
 
 
 export default function () {

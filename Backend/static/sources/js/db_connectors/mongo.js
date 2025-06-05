@@ -141,18 +141,17 @@ async function FindUser_Summary(sub){
 async function User_Update_Game_History(user, mode,game_doc_id){
     switch(mode){
         case "constant":
-            user_coll.updateOne({sub : user.sub}, { $push : {"game_history.constant" : game_doc_id}})
+            await user_coll.updateOne({sub : user.sub}, { $push : {"game_history.constant" : game_doc_id}})
             break;
 
         case "liberty":
-            user_coll.updateOne({sub : user.sub}, { $push : {"game_history.liberty" : game_doc_id}})
+            await user_coll.updateOne({sub : user.sub}, { $push : {"game_history.liberty" : game_doc_id}})
             break;
 
         case "draft":
-            user_coll.updateOne({sub : user.sub}, { $push : {"game_history.draft" : game_doc_id}})
+           await  user_coll.updateOne({sub : user.sub}, { $push : {"game_history.draft" : game_doc_id}})
             break;
     }
-
 }
 
 
@@ -204,8 +203,8 @@ async function AddGameDocument(first, second, result){
     let ret = await Insert_Game_Document(game_doc, result.mode)
     // console.log(ret.insertedId)
 
-    User_Update_Game_History(first, result.mode, ret.insertedId)
-    User_Update_Game_History(second, result.mode, ret.insertedId)
+    await User_Update_Game_History(first, result.mode, ret.insertedId)
+    await User_Update_Game_History(second, result.mode, ret.insertedId)
 
     return game_doc
 }

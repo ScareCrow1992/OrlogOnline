@@ -72,21 +72,6 @@ export default class Dummy {
 
 
         // let backend_host = "http://0.0.0.0:7370"
-        let path = "/dummy/login"
-        let query = `?id=${this.uid}&email=bot${this.uid}@orlog.com`
-        let login_url = gameclient_host + path + query
-        // console.log(login_url)
-        // this.axios_pool.post(login_url)
-        //     .then((ret) => {
-        //         // console.log(ret.data)
-        //     })
-        //     .catch((err) => {
-        //         wstreams.write(`[[ Dummy - ${this.uid} ]]\n`)
-        //         wstreams.write("< /dummy/login >\n")
-
-        //         wstreams.write(JSON.stringify(err))
-        //         wstreams.write("\n\n")
-        //     })
 
 
     }
