@@ -66,7 +66,7 @@
 | **부하분산** | **GCP Load Balancer** |
 | **서버 간 통신** | **Redis Pub/Sub** |
 | **데이터베이스** | **MongoDB** |
-| **리소스 CDN** | **Cloudflare R2** |
+| **스토리지 서비스** | **Cloudflare R2** |
 | **도메인 & HTTPS** | **Cloudflare DNS + SSL** |
 
 
@@ -88,7 +88,8 @@
         - `DBTransactionServer`: Mongo DB의 트랜잭션 관리
 - 모든 서버는 **Redis 채널을 통해 서로 메시지를 주고받으며**, 유저 간 매칭, 게임 상태 전달, 로그 기록 등의 역할을 수행한다.
 - 클라이언트는 **WebSocket**을 통해 실시간 상태를 전달받으며, 게임 렌더링은 브라우저에서 **Three.js**를 통해 수행된다.
-- 3D 모델, 사운드, 텍스처 등 용량이 큰 리소스는 `Cloudflare R2`에 저장되어 다운로드 트래픽을 분산시킨다.
+- 3D 모델, 사운드, 텍스처 등 대용량 리소스는 Cloudflare R2에 저장하고,
+사용자들은 R2의 public URL을 통해 직접 다운로드합니다..
 
 
 

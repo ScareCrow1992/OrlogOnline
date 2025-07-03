@@ -37,9 +37,6 @@ export default class Engine {
         this.socket_adapters = new Map()
         // key : uid
         // value : game instance
-
-
-
     }
 
 
@@ -57,7 +54,6 @@ export default class Engine {
     }
 
 
-
     _AlertStop(stopper_uid, opponent_uid, socket_state) {
 
         let game_ = this.games.get(stopper_uid)
@@ -71,7 +67,6 @@ export default class Engine {
 
     }
 
-    
 
     // 소켓서버 => 엔진서버
     _Receive(uid, data){
