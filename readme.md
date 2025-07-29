@@ -6,6 +6,9 @@
 ## 📽 [▶ 유튜브 플레이 영상 보기](https://www.youtube.com/watch?v=zSa8XJc0aY4)
 
 
+## Figma
+https://www.figma.com/design/lffM9lJzCoj4PvcrFexWG9/Orlog?node-id=0-1&p=f&t=Qfd9BKk7s7pn07Fl-0
+
 
 # 1. Orlog 란?
 - Ubisoft의 「Assassin's Creed: Valhalla」에 등장하는 주사위 기반 보드게임
