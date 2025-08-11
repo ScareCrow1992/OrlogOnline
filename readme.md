@@ -33,14 +33,14 @@ https://www.figma.com/design/lffM9lJzCoj4PvcrFexWG9/Orlog?node-id=0-1&p=f&t=Qfd9
 
 # 4. 이 프로젝트로 증명한 실무 역량
 1. **Three.js 클라이언트 개발**
-  - 온라인 보드게임 개발
-  - Instanced Mesh를 이용한 최적화 및 Particle System 구현
-  - 플레이어간 렌더링 상태 동기화
-  - GLSL 쉐이더를 통한 특수효과 구현
-  - Outline, Unreal Bloom 등 다양한 후처리 기술 활용
-  - 서버상태와 물리엔진 시뮬레이션 결과를 일치 시키기 위한 실시간 연산
+    - 온라인 보드게임 개발
+    - Instanced Mesh를 이용한 최적화 및 Particle System 구현
+    - 플레이어간 렌더링 상태 동기화
+    - GLSL 쉐이더를 통한 특수효과 구현
+    - Outline, Unreal Bloom 등 다양한 후처리 기술 활용
+    - 서버상태와 물리엔진 시뮬레이션 결과를 일치 시키기 위한 실시간 연산
 
-1. **실시간 트래픽 처리 경험**
+2. **실시간 트래픽 처리 경험**
    - Node.js 기반 로직 서버 + WebSocket 서버 분리 구조
    - Redis Pub/Sub을 이용한 다중 서버 간 유저 매칭/통신 구현
    - 서로 다른 서버에 붙은 유저들 간 실시간 PvP 완전 구현
@@ -48,16 +48,16 @@ https://www.figma.com/design/lffM9lJzCoj4PvcrFexWG9/Orlog?node-id=0-1&p=f&t=Qfd9
      - ingress : 약 20.47 KiB/s
      - egress : 약 95.47 KiB/s
 
-2. **운영 환경 구축 및 최적화**
+3. **운영 환경 구축 및 최적화**
    - GCP Load Balancer + PM2 + Docker로 수직/수평적으로 확장 가능한 서버 환경 구성
    - Redis `zAdd`, `zRemRangeByScore` → 매칭 큐/스케줄링 로직 구성
    - Redis Lua Script로 DB 락 없이 atomic 갱신 로직 구현
 
-3. **서비스 최적화 및 보안**
+4. **서비스 최적화 및 보안**
    - OAuth 기반 사용자 인증과 WebSocket 연결 연동
    - Cloudflare R2 CDN 적용 → 클라이언트 자산 전송 최적화 및 비용 절감
 
-4. **개발 외 요소: 테스트 및 검증**
+5. **개발 외 요소: 테스트 및 검증**
    - CLI 기반 부하 테스트 스크립트 직접 구현
    - 다양한 트래픽 시나리오 대응 (1:1, 병렬 접속, 재접속)
 
