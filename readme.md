@@ -33,12 +33,12 @@ https://www.figma.com/design/lffM9lJzCoj4PvcrFexWG9/Orlog?node-id=0-1&p=f&t=Qfd9
 
 # 4. 이 프로젝트로 증명한 실무 역량
 1. **Three.js 클라이언트 개발**
-    - 온라인 보드게임 개발
+    - PvP 온라인 보드게임 구현
     - Instanced Mesh를 이용한 최적화 및 Particle System 구현
     - 플레이어간 렌더링 상태 동기화
     - GLSL 쉐이더를 통한 특수효과 구현
     - Outline, Unreal Bloom 등 다양한 후처리 기술 활용
-    - 서버상태와 물리엔진 시뮬레이션 결과를 일치 시키기 위한 실시간 연산
+    - 서버상태와 물리엔진 시뮬레이션 결과를 일치 시키기 위한 실시간 Transform 연산
 
 2. **실시간 트래픽 처리 경험**
    - Node.js 기반 로직 서버 + WebSocket 서버 분리 구조
