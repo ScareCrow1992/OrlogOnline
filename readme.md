@@ -99,21 +99,21 @@ https://www.figma.com/design/lffM9lJzCoj4PvcrFexWG9/Orlog?node-id=0-1&p=f&t=Qfd9
 - 모든 서버는 **Redis 채널을 통해 서로 메시지를 주고받으며**, 유저 간 매칭, 게임 상태 전달, 로그 기록 등의 역할을 수행한다.
 - 클라이언트는 **WebSocket**을 통해 실시간 상태를 전달받으며, 게임 렌더링은 브라우저에서 **Three.js**를 통해 수행된다.
 - 3D 모델, 사운드, 텍스처 등 대용량 리소스는 Cloudflare R2에 저장하고,
-사용자들은 R2의 public URL을 통해 직접 다운로드합니다..
+사용자들은 R2의 public URL을 통해 직접 다운로드 수행
 
 
 
 
 
 # 7. 상세 설명
-본 프로젝트에 대한 보다 자세한 기술적 설명은 아래 첨부된 링크에서 확인가능하다.
+본 프로젝트에 대한 보다 자세한 기술적 설명은 아래 첨부된 링크에서 확인 가능합니다.
 
 [Detail Document]
 https://lowly-pearl-d16.notion.site/Orlog-1ee78606e97b80dd924ed7fb2d4e7f89
 
 
 # 8. 빌드 & 가동 가이드
-본 프로젝트의 빌드 & 가동 가이드는 아래 문서에서 확인 가능하다.
+본 프로젝트의 빌드 & 가동 가이드는 아래 문서에서 확인 가능합니다.
 
 [Build & Run Guide]
 https://grand-pajama-ca5.notion.site/orlog-io-1f2e6f9328198025817df2fd8a7affb6
